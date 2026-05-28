@@ -193,6 +193,20 @@ body::before {
 }
 
 @media (max-width: 768px) {
+  /* Switch nav to sticky so it lives in document flow — Safari iOS can't
+     create a gap above a sticky element that starts at the top of the page. */
+  .axiom-nav {
+    position: sticky !important;
+    top: 0 !important;
+  }
+
+  /* Sticky nav occupies space in the flow, so main needs no manual clearance. */
+  .main-content {
+    padding-top: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
 
   .grid-2col,
   .grid-asymm,

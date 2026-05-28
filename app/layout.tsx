@@ -58,7 +58,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <main style={{ paddingTop: 'calc(72px + env(safe-area-inset-top, 0px))' }}>{children}</main>
+        <main className="main-content" style={{ paddingTop: 'calc(72px + env(safe-area-inset-top, 0px))' }}>{children}</main>
         <Footer />
         {gaId && (
           <>

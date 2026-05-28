@@ -28,6 +28,7 @@ export default function Navbar() {
   return (
     <>
       <nav
+        className="axiom-nav"
         style={{
           position: 'fixed',
           top: 0,
