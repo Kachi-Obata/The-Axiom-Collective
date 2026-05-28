@@ -29,17 +29,15 @@ export default function Navbar() {
     <>
       <nav
         style={{
-          position: 'fixed',
+          position: 'sticky',
           top: 0,
-          left: 0,
-          right: 0,
           zIndex: 1000,
           padding: '0 2.5rem',
           height: '72px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          transition: 'all 0.4s ease',
+          transition: 'background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease',
           background: scrolled ? 'rgba(10,10,10,0.95)' : 'transparent',
           backdropFilter: scrolled ? 'blur(12px)' : 'none',
           borderBottom: scrolled ? '1px solid var(--border)' : '1px solid transparent',

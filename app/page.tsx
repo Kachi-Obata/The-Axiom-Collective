@@ -48,7 +48,7 @@ export default function Home() {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        padding: '72px 2.5rem 6rem',
+        padding: '0 2.5rem 6rem',
         position: 'relative',
         overflow: 'hidden',
       }}>
