@@ -1,0 +1,21 @@
+{
+  "name": "The Axiom Collective",
+  "short_name": "Axiom Collective",
+  "description": "Africa's leading academic positioning and postgraduate admissions strategy firm.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0A0A0A",
+  "theme_color": "#0A0A0A",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
