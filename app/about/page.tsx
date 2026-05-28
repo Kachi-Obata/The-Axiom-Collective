@@ -41,7 +41,6 @@ export default function AboutPage() {
         }} />
         <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%', position: 'relative', zIndex: 1 }}>
           <div className="animate-fade-up opacity-0-init" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
-            <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)' }} />
             <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500 }}>About the Collective</span>
           </div>
           <h1 className="font-display animate-fade-up opacity-0-init delay-200" style={{
@@ -62,7 +61,6 @@ export default function AboutPage() {
       <section className="section-padded" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', maxWidth: '1200px', margin: '0 auto' }}>
         <div className="grid-2col" style={{ gap: '8rem', alignItems: 'start' }}>
           <AnimateOnScroll>
-            <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginBottom: '2rem' }} />
             <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 3vw, 2.8rem)', fontWeight: 300, lineHeight: 1.2, color: 'var(--off-white)', marginBottom: '2rem' }}>
               Who We Are
             </h2>
@@ -97,7 +95,6 @@ export default function AboutPage() {
       <section className="section-padded-sm" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', background: 'var(--bg-secondary)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <AnimateOnScroll>
-            <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginBottom: '2rem' }} />
             <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', fontWeight: 300, color: 'var(--off-white)', marginBottom: '5rem' }}>Our Philosophy</h2>
           </AnimateOnScroll>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem' }}>
@@ -135,7 +132,6 @@ export default function AboutPage() {
       {/* VALUES */}
       <section className="section-padded" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', maxWidth: '1200px', margin: '0 auto' }}>
         <AnimateOnScroll>
-          <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginBottom: '2rem' }} />
           <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', fontWeight: 300, color: 'var(--off-white)', marginBottom: '5rem' }}>Institutional Values</h2>
         </AnimateOnScroll>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -159,7 +155,6 @@ export default function AboutPage() {
       <section className="section-padded" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', background: 'var(--bg-secondary)', borderTop: '1px solid var(--border)' }}>
         <div className="grid-2col" style={{ maxWidth: '1200px', margin: '0 auto', gap: '6rem', alignItems: 'center' }}>
           <AnimateOnScroll>
-            <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginBottom: '2rem' }} />
             <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 3vw, 3rem)', fontWeight: 300, lineHeight: 1.15, color: 'var(--off-white)', marginBottom: '1.5rem' }}>
               Beyond Admissions.<br />
               <em style={{ fontStyle: 'italic', color: 'var(--crimson)' }}>An Intellectual Ecosystem.</em>

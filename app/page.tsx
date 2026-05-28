@@ -71,7 +71,6 @@ export default function Home() {
 
         <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%', position: 'relative', zIndex: 1 }}>
           <div className="animate-fade-up opacity-0-init" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2.5rem' }}>
-            <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)' }} />
             <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500 }}>
               Academic Positioning Collective
             </span>
@@ -192,7 +191,6 @@ export default function Home() {
         <div className="grid-2col" style={{ gap: '6rem', alignItems: 'start' }}>
           <div>
             <AnimateOnScroll>
-              <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginBottom: '2rem' }} />
               <h2 className="font-display" style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)', fontWeight: 300, lineHeight: 1.1, color: 'var(--off-white)', marginBottom: '2rem' }}>
                 The Gap Between<br />
                 <em style={{ fontStyle: 'italic', color: 'var(--crimson)' }}>Talent</em> and<br />
@@ -239,7 +237,6 @@ export default function Home() {
           <AnimateOnScroll>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '5rem', flexWrap: 'wrap', gap: '2rem' }}>
               <div>
-                <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginBottom: '2rem' }} />
                 <h2 className="font-display" style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', fontWeight: 300, lineHeight: 1.1, color: 'var(--off-white)' }}>
                   What We Do
                 </h2>
@@ -313,7 +310,6 @@ export default function Home() {
       }}>
         <AnimateOnScroll>
           <div style={{ maxWidth: '700px', margin: '0 auto' }}>
-            <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', margin: '0 auto 2.5rem' }} />
             <h2 className="font-display" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 300, lineHeight: 1.1, color: 'var(--off-white)', marginBottom: '1.5rem' }}>
               Your Trajectory<br />
               <em style={{ fontStyle: 'italic', color: 'var(--crimson)' }}>Begins Here.</em>

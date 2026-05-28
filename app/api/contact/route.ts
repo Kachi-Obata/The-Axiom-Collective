@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid email address.' }, { status: 400 });
   }
 
-  const to   = process.env.CONTACT_EMAIL   || 'hello@theaxiomcollective.org';
+  const to   = process.env.CONTACT_EMAIL   || 'marius@theaxiomcollective.org';
   const from = process.env.RESEND_FROM     || 'onboarding@resend.dev';
 
   const { error } = await resend.emails.send({

@@ -126,11 +126,7 @@ export default function ContactPage() {
           opacity: 0.3,
         }} />
         <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%', position: 'relative', zIndex: 1 }}>
-          <div className="animate-fade-up opacity-0-init" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
-            <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)' }} />
-            <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500 }}>Book a Consultation</span>
-          </div>
-          <h1 className="font-display animate-fade-up opacity-0-init delay-200" style={{
+          <h1 className="font-display animate-fade-up opacity-0-init" style={{
             fontSize: 'clamp(3rem, 6vw, 6rem)',
             fontWeight: 300,
             lineHeight: 1.0,
@@ -150,7 +146,6 @@ export default function ContactPage() {
           {/* Left: Info */}
           <AnimateOnScroll>
             <div>
-              <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginBottom: '2rem' }} />
               <h2 className="font-display" style={{ fontSize: '1.8rem', fontWeight: 300, color: 'var(--off-white)', marginBottom: '1.5rem', lineHeight: 1.2 }}>
                 What to Expect
               </h2>
@@ -178,7 +173,7 @@ export default function ContactPage() {
               <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--border)' }}>
                 <p style={{ color: 'var(--muted)', fontSize: '0.78rem', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 500, marginBottom: '1rem' }}>Contact</p>
                 <p style={{ color: 'var(--off-white)', fontSize: '0.88rem', fontWeight: 300, marginBottom: '0.75rem' }}>
-                  hello@theaxiomcollective.org
+                  marius@theaxiomcollective.org
                 </p>
                 {whatsappNumber && (
                   <a

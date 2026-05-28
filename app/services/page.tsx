@@ -98,7 +98,6 @@ export default function ServicesPage() {
         }} />
         <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%', position: 'relative', zIndex: 1 }}>
           <div className="animate-fade-up opacity-0-init" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
-            <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)' }} />
             <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500 }}>Our Services</span>
           </div>
           <h1 className="font-display animate-fade-up opacity-0-init delay-200" style={{
