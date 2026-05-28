@@ -29,11 +29,19 @@ export default function Navbar() {
     <>
       <nav
         style={{
-          position: 'sticky',
+          position: 'fixed',
           top: 0,
+          left: 0,
+          right: 0,
           zIndex: 1000,
-          padding: '0 2.5rem',
-          height: '72px',
+          // paddingTop pushes nav content below the status bar/notch.
+          // height grows to fill the extra space so the background covers
+          // the area where Safari's address bar lives (fixed with viewport-fit=cover).
+          paddingTop: 'env(safe-area-inset-top, 0px)',
+          paddingLeft: '2.5rem',
+          paddingRight: '2.5rem',
+          paddingBottom: 0,
+          height: 'calc(72px + env(safe-area-inset-top, 0px))',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -121,7 +129,7 @@ export default function Navbar() {
       <div
         style={{
           position: 'fixed',
-          top: '72px',
+          top: 'calc(72px + env(safe-area-inset-top, 0px))',
           left: 0,
           right: 0,
           bottom: 0,

@@ -85,7 +85,6 @@ export default function ServicesPage() {
         flexDirection: 'column',
         justifyContent: 'flex-end',
         padding: '0 2.5rem 6rem',
-        paddingTop: '80px',
         position: 'relative',
         overflow: 'hidden',
         borderBottom: '1px solid var(--border)',

@@ -1,8 +1,18 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+// viewport-fit=cover extends the page coordinate system to the full screen,
+// so position:fixed top:0 anchors the nav at the absolute top — covering the
+// area where Safari's address bar sits. Without this, the nav sits below the
+// address bar and content bleeds into that space when the bar collapses.
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+};
 
 export const metadata: Metadata = {
   title: "The Axiom Collective | Strategy. Positioning. Possibility.",
@@ -48,7 +58,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <main>{children}</main>
+        <main style={{ paddingTop: 'calc(72px + env(safe-area-inset-top, 0px))' }}>{children}</main>
         <Footer />
         {gaId && (
           <>
