@@ -34,7 +34,7 @@ const services = [
   {
     number: '03',
     title: 'Statement of Purpose & Narrative Architecture',
-    tagline: 'We do not edit essays. We architect trajectories.',
+    tagline: "We don't edit essays. We architect trajectories.",
     description: 'The Axiom Collective specializes in constructing sophisticated, institutionally aligned application narratives. We develop personal statements, statements of purpose, and academic narratives that communicate intellectual depth and professional direction.',
     details: [
       'Personal statement and SOP development',

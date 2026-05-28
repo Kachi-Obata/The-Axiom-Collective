@@ -121,7 +121,7 @@ export default function AboutPage() {
                 <span style={{ position: 'absolute', top: '-1px', left: '2.5rem', display: 'block', width: '40px', height: '2px', background: 'var(--crimson)' }} />
                 <p className="font-display" style={{ fontSize: '1.6rem', fontWeight: 300, color: 'var(--off-white)', marginBottom: '1rem', lineHeight: 1.2 }}>The Axiom<br />Difference</p>
                 <p style={{ color: 'var(--muted)', fontSize: '0.88rem', lineHeight: '1.8', fontWeight: 300 }}>
-                  We do not process applications. We architect intellectual identities. We align your story with the language, culture, and expectations of the world's most selective institutions.
+                  We don't process applications. We architect intellectual identities. We align your story with the language, culture, and expectations of the world's most selective institutions.
                 </p>
               </div>
             </AnimateOnScroll>

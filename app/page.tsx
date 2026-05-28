@@ -48,7 +48,7 @@ export default function Home() {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        padding: '0 2.5rem 6rem',
+        padding: '72px 2.5rem 6rem',
         position: 'relative',
         overflow: 'hidden',
       }}>
@@ -85,7 +85,7 @@ export default function Home() {
             marginBottom: '1.5rem',
             maxWidth: '900px',
           }}>
-            We Do Not<br />
+            We Don't<br />
             Craft Applications.<br />
             <em style={{ color: 'var(--crimson)', fontStyle: 'italic' }}>We Position People.</em>
           </h1>
@@ -99,7 +99,7 @@ export default function Home() {
               color: 'var(--muted)',
               maxWidth: '520px',
             }}>
-              Elite institutions do not admit credentials alone. They admit narratives, trajectories, and intellectual identities. The Axiom Collective transforms high-potential candidates into globally compelling applicants.
+              Elite institutions don't admit credentials alone. They admit narratives, trajectories, and intellectual identities. The Axiom Collective transforms high-potential candidates into globally compelling applicants.
             </p>
 
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -294,7 +294,7 @@ export default function Home() {
             color: 'var(--off-white)',
             letterSpacing: '0.01em',
           }}>
-            "Elite admissions are not merely administrative processes; they are exercises in intellectual recognition and strategic positioning."
+            "Elite admissions aren't merely administrative processes; they're exercises in intellectual recognition and strategic positioning."
           </blockquote>
           <span style={{ display: 'block', width: '1px', height: '60px', background: 'var(--crimson)', margin: '3rem auto 0' }} />
         </AnimateOnScroll>
