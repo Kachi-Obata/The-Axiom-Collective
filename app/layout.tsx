@@ -1,18 +1,24 @@
 import type { Metadata, Viewport } from "next";
+import { headers } from "next/headers";
 import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-// viewport-fit=cover extends the page coordinate system to the full screen,
-// so position:fixed top:0 anchors the nav at the absolute top — covering the
-// area where Safari's address bar sits. Without this, the nav sits below the
-// address bar and content bleeds into that space when the bar collapses.
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  viewportFit: 'cover',
-};
+// iOS Safari can expose a visual-viewport gap above fixed headers when
+// viewport-fit=cover is enabled. We disable it only on iOS Safari to keep
+// the top inset outside the page, matching the seamless look you referenced.
+export function generateViewport(): Viewport {
+  const ua = headers().get('user-agent') || '';
+  const isIOS = /iP(hone|ad|od)/i.test(ua);
+  const isSafari = isIOS && /Safari/i.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS/i.test(ua);
+
+  return {
+    width: 'device-width',
+    initialScale: 1,
+    ...(isSafari ? {} : { viewportFit: 'cover' }),
+  };
+}
 
 export const metadata: Metadata = {
   title: "The Axiom Collective | Strategy. Positioning. Possibility.",
@@ -59,7 +65,7 @@ export default function RootLayout({
       <body>
         <div className="safari-top-fill" aria-hidden="true" />
         <Navbar />
-        <main style={{ paddingTop: 'calc(72px + env(safe-area-inset-top, 0px) + var(--vv-top, 0px))' }}>{children}</main>
+        <main style={{ paddingTop: 'calc(72px + env(safe-area-inset-top, 0px))' }}>{children}</main>
         <Footer />
         {gaId && (
           <>

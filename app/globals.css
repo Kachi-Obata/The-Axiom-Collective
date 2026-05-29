@@ -13,7 +13,6 @@
   --muted-light: #6B6560;
   --border: rgba(245, 240, 232, 0.08);
   --border-strong: rgba(245, 240, 232, 0.15);
-  --vv-top: 0px;
 }
 
 * {
@@ -25,6 +24,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
+  background: var(--bg);
 }
 
 body {
@@ -40,16 +40,10 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 0;
+  height: env(safe-area-inset-top, 0px);
   background: var(--bg);
-  z-index: 999;
+  z-index: 1001;
   pointer-events: none;
-}
-
-@supports (-webkit-touch-callout: none) {
-  .safari-top-fill {
-    height: calc(env(safe-area-inset-top, 0px) + var(--vv-top, 0px));
-  }
 }
 
 /* Grain overlay */
