@@ -28,16 +28,12 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="axiom-nav"
         style={{
           position: 'fixed',
           top: 0,
           left: 0,
           right: 0,
           zIndex: 1000,
-          // paddingTop pushes nav content below the status bar/notch.
-          // height grows to fill the extra space so the background covers
-          // the area where Safari's address bar lives (fixed with viewport-fit=cover).
           paddingTop: 'env(safe-area-inset-top, 0px)',
           paddingLeft: '2.5rem',
           paddingRight: '2.5rem',
@@ -47,7 +43,7 @@ export default function Navbar() {
           alignItems: 'center',
           justifyContent: 'space-between',
           transition: 'background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease',
-          background: scrolled ? 'rgba(10,10,10,0.95)' : 'transparent',
+          background: scrolled ? 'rgba(10,10,10,0.95)' : 'var(--bg)',
           backdropFilter: scrolled ? 'blur(12px)' : 'none',
           borderBottom: scrolled ? '1px solid var(--border)' : '1px solid transparent',
         }}
