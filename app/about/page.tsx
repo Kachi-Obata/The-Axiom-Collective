@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 
 const values = [
@@ -147,6 +148,88 @@ export default function AboutPage() {
               </div>
             </AnimateOnScroll>
           ))}
+        </div>
+      </section>
+
+      {/* FOUNDER BIO */}
+      <section className="section-padded" style={{
+        paddingLeft: '2.5rem',
+        paddingRight: '2.5rem',
+        background: 'var(--bg-secondary)',
+        borderTop: '1px solid var(--border)',
+        borderBottom: '1px solid var(--border)',
+      }}>
+        <div className="grid-asymm" style={{ maxWidth: '1200px', margin: '0 auto', gap: '6rem', alignItems: 'start' }}>
+
+          {/* Photo */}
+          <AnimateOnScroll>
+            <div style={{ position: 'relative', width: '100%', aspectRatio: '3 / 4' }}>
+              <Image
+                src="/marius.png"
+                alt="Dr. Marius Isikalu"
+                fill
+                priority
+                style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                sizes="(max-width: 768px) 100vw, 40vw"
+              />
+            </div>
+          </AnimateOnScroll>
+
+          {/* Bio */}
+          <AnimateOnScroll delay={200}>
+            <h2 className="font-display" style={{
+              fontSize: 'clamp(2.2rem, 3vw, 3.2rem)',
+              fontWeight: 300,
+              color: 'var(--off-white)',
+              marginBottom: '0.5rem',
+              lineHeight: 1.1,
+            }}>
+              Dr. Marius Isikalu
+            </h2>
+            <p style={{
+              fontFamily: 'DM Sans, sans-serif',
+              fontSize: '0.68rem',
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              color: 'var(--crimson)',
+              fontWeight: 500,
+              marginBottom: '3rem',
+            }}>
+              Founder
+            </p>
+
+            <p style={{ color: 'var(--muted)', fontSize: '0.92rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
+              Dr. Marius Isikalu is a researcher, academic strategist, and founder of The Axiom Collective, a premium postgraduate admissions and academic positioning consultancy dedicated to helping globally ambitious applicants gain admission into the world's leading universities and fellowship programs.
+            </p>
+            <p style={{ color: 'var(--muted)', fontSize: '0.92rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
+              With a strong background in research and intellectual development, he specialises in helping applicants strategically position themselves for elite postgraduate opportunities across the United States, the United Kingdom, and Europe. His work focuses on the deeper processes of narrative architecture and institutional positioning.
+            </p>
+            <p style={{ color: 'var(--muted)', fontSize: '0.92rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
+              Through The Axiom Collective, Dr. Isikalu has successfully guided applicants to institutions including Harvard University, Stanford University, Yale University, Columbia University, Johns Hopkins University, the London School of Economics, Imperial College London, and University College London, among others.
+            </p>
+            <p style={{ color: 'var(--muted)', fontSize: '0.92rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '3rem' }}>
+              His broader intellectual interests lie in global affairs, political theory, methodology, and the cultivation of globally competitive African scholars capable of shaping policy and leadership spaces internationally.
+            </p>
+
+            {/* Pull quote */}
+            <div style={{
+              borderLeft: '2px solid var(--crimson)',
+              paddingLeft: '2rem',
+              marginTop: '1rem',
+            }}>
+              <blockquote className="font-display" style={{
+                fontSize: 'clamp(1.2rem, 2vw, 1.55rem)',
+                fontWeight: 300,
+                fontStyle: 'italic',
+                lineHeight: 1.45,
+                color: 'var(--off-white)',
+                letterSpacing: '0.01em',
+              }}>
+                "Exceptional applicants are not manufactured through templates; they are cultivated through strategy and intellectual authenticity."
+              </blockquote>
+            </div>
+          </AnimateOnScroll>
+
         </div>
       </section>
 

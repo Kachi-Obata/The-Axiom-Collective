@@ -206,6 +206,11 @@ body::before {
 
 @media (max-width: 768px) {
 
+  .founder-teaser {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+
   .grid-2col,
   .grid-asymm,
   .grid-contact,

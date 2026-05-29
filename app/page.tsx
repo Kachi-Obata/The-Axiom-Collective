@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 
 const services = [
@@ -281,6 +282,85 @@ export default function Home() {
             "Elite admissions aren't merely administrative processes; they're exercises in intellectual recognition and strategic positioning."
           </blockquote>
           <span style={{ display: 'block', width: '1px', height: '60px', background: 'var(--crimson)', margin: '3rem auto 0' }} />
+        </AnimateOnScroll>
+      </section>
+
+      {/* FOUNDER TEASER */}
+      <section className="section-padded-sm" style={{
+        paddingLeft: '2.5rem',
+        paddingRight: '2.5rem',
+        borderTop: '1px solid var(--border)',
+      }}>
+        <AnimateOnScroll>
+          <div style={{
+            maxWidth: '1200px',
+            margin: '0 auto',
+            display: 'grid',
+            gridTemplateColumns: '260px 1fr',
+            gap: '5rem',
+            alignItems: 'center',
+          }}
+            className="founder-teaser"
+          >
+            {/* Photo */}
+            <div style={{ position: 'relative', width: '100%', aspectRatio: '3 / 4' }}>
+              <Image
+                src="/marius.png"
+                alt="Dr. Marius Isikalu"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                sizes="(max-width: 768px) 100vw, 260px"
+              />
+            </div>
+
+            {/* Text */}
+            <div>
+              <p style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: '0.68rem',
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: 'var(--crimson)',
+                fontWeight: 500,
+                marginBottom: '0.75rem',
+              }}>
+                Founder
+              </p>
+              <h3 className="font-display" style={{
+                fontSize: 'clamp(1.8rem, 2.5vw, 2.5rem)',
+                fontWeight: 300,
+                color: 'var(--off-white)',
+                marginBottom: '2rem',
+                lineHeight: 1.1,
+              }}>
+                Dr. Marius Isikalu
+              </h3>
+              <p className="font-display" style={{
+                fontSize: 'clamp(1.1rem, 1.6vw, 1.4rem)',
+                fontWeight: 300,
+                fontStyle: 'italic',
+                lineHeight: 1.5,
+                color: 'var(--muted)',
+                marginBottom: '2.5rem',
+                maxWidth: '520px',
+              }}>
+                "Exceptional applicants are not manufactured through templates; they are cultivated through strategy and intellectual authenticity."
+              </p>
+              <Link href="/about" style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: '0.72rem',
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                textDecoration: 'none',
+                color: 'var(--crimson)',
+                borderBottom: '1px solid var(--crimson)',
+                paddingBottom: '2px',
+                fontWeight: 500,
+              }}>
+                Read his story →
+              </Link>
+            </div>
+          </div>
         </AnimateOnScroll>
       </section>
 
