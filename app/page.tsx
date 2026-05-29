@@ -144,22 +144,6 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="animate-fade-in opacity-0-init delay-700" style={{
-          position: 'absolute',
-          bottom: '2.5rem',
-          right: '2.5rem',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '0.75rem',
-          color: 'var(--muted)',
-          fontSize: '0.7rem',
-          letterSpacing: '0.14em',
-          textTransform: 'uppercase',
-          fontFamily: 'DM Sans, sans-serif',
-        }}>
-          <span>Scroll</span>
-          <span style={{ display: 'block', width: '32px', height: '1px', background: 'var(--muted)' }} />
-        </div>
       </section>
 
       {/* INSTITUTIONS TICKER */}

@@ -170,10 +170,6 @@ export default function ContactPage() {
               </div>
 
               <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--border)' }}>
-                <p style={{ color: 'var(--muted)', fontSize: '0.78rem', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 500, marginBottom: '1rem' }}>Contact</p>
-                <p style={{ color: 'var(--off-white)', fontSize: '0.88rem', fontWeight: 300, marginBottom: '0.75rem' }}>
-                  marius@theaxiomcollective.org
-                </p>
                 {whatsappNumber && (
                   <a
                     href={`https://wa.me/${whatsappNumber}`}
