@@ -8,8 +8,8 @@ import Footer from "@/components/Footer";
 // iOS Safari can expose a visual-viewport gap above fixed headers when
 // viewport-fit=cover is enabled. We disable it only on iOS Safari to keep
 // the top inset outside the page, matching the seamless look you referenced.
-export function generateViewport(): Viewport {
-  const ua = headers().get('user-agent') || '';
+export async function generateViewport(): Promise<Viewport> {
+  const ua = (await headers()).get('user-agent') || '';
   const isIOS = /iP(hone|ad|od)/i.test(ua);
   const isSafari = isIOS && /Safari/i.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS/i.test(ua);
 
