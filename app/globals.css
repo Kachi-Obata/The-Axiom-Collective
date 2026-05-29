@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -31,7 +32,6 @@ body {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
-  overflow-x: clip;
 }
 
 /* Grain overlay */
