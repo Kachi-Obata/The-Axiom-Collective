@@ -13,6 +13,7 @@
   --muted-light: #6B6560;
   --border: rgba(245, 240, 232, 0.08);
   --border-strong: rgba(245, 240, 232, 0.15);
+  --vv-top: 0px;
 }
 
 * {
@@ -32,6 +33,23 @@ body {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
+}
+
+.safari-top-fill {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: var(--bg);
+  z-index: 999;
+  pointer-events: none;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .safari-top-fill {
+    height: calc(env(safe-area-inset-top, 0px) + var(--vv-top, 0px));
+  }
 }
 
 /* Grain overlay */

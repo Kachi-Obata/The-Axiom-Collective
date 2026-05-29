@@ -57,8 +57,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <div className="safari-top-fill" aria-hidden="true" />
         <Navbar />
-        <main style={{ paddingTop: 'calc(72px + env(safe-area-inset-top, 0px))' }}>{children}</main>
+        <main style={{ paddingTop: 'calc(72px + env(safe-area-inset-top, 0px) + var(--vv-top, 0px))' }}>{children}</main>
         <Footer />
         {gaId && (
           <>

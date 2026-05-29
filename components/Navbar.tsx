@@ -22,6 +22,26 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    const updateViewportOffset = () => {
+      const offset = window.visualViewport?.offsetTop ?? 0;
+      document.documentElement.style.setProperty('--vv-top', `${offset}px`);
+    };
+
+    updateViewportOffset();
+
+    const vv = window.visualViewport;
+    vv?.addEventListener('resize', updateViewportOffset);
+    vv?.addEventListener('scroll', updateViewportOffset);
+    window.addEventListener('orientationchange', updateViewportOffset);
+
+    return () => {
+      vv?.removeEventListener('resize', updateViewportOffset);
+      vv?.removeEventListener('scroll', updateViewportOffset);
+      window.removeEventListener('orientationchange', updateViewportOffset);
+    };
+  }, []);
+
+  useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
 
@@ -30,7 +50,7 @@ export default function Navbar() {
       <nav
         style={{
           position: 'fixed',
-          top: 0,
+          top: 'var(--vv-top, 0px)',
           left: 0,
           right: 0,
           zIndex: 1000,
@@ -126,7 +146,7 @@ export default function Navbar() {
       <div
         style={{
           position: 'fixed',
-          top: 'calc(72px + env(safe-area-inset-top, 0px))',
+          top: 'calc(72px + env(safe-area-inset-top, 0px) + var(--vv-top, 0px))',
           left: 0,
           right: 0,
           bottom: 0,
