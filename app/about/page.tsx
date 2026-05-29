@@ -97,9 +97,9 @@ export default function AboutPage() {
           <AnimateOnScroll>
             <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', fontWeight: 300, color: 'var(--off-white)', marginBottom: '5rem' }}>Our Philosophy</h2>
           </AnimateOnScroll>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem' }}>
-            <AnimateOnScroll>
-              <div style={{ padding: '2.5rem', border: '1px solid var(--border)', background: 'var(--bg-card)', position: 'relative' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem', alignItems: 'stretch' }}>
+            <AnimateOnScroll style={{ height: '100%' }}>
+              <div style={{ height: '100%', padding: '2.5rem', border: '1px solid var(--border)', background: 'var(--bg-card)', position: 'relative' }}>
                 <span style={{ position: 'absolute', top: '-1px', left: '2.5rem', display: 'block', width: '40px', height: '2px', background: 'var(--crimson)' }} />
                 <p className="font-display" style={{ fontSize: '1.6rem', fontWeight: 300, color: 'var(--off-white)', marginBottom: '1rem', lineHeight: 1.2 }}>The Admissions<br />Fallacy</p>
                 <p style={{ color: 'var(--muted)', fontSize: '0.88rem', lineHeight: '1.8', fontWeight: 300 }}>
@@ -107,8 +107,8 @@ export default function AboutPage() {
                 </p>
               </div>
             </AnimateOnScroll>
-            <AnimateOnScroll delay={150}>
-              <div style={{ padding: '2.5rem', border: '1px solid var(--border)', background: 'var(--bg-card)', position: 'relative' }}>
+            <AnimateOnScroll delay={150} style={{ height: '100%' }}>
+              <div style={{ height: '100%', padding: '2.5rem', border: '1px solid var(--border)', background: 'var(--bg-card)', position: 'relative' }}>
                 <span style={{ position: 'absolute', top: '-1px', left: '2.5rem', display: 'block', width: '40px', height: '2px', background: 'var(--crimson)' }} />
                 <p className="font-display" style={{ fontSize: '1.6rem', fontWeight: 300, color: 'var(--off-white)', marginBottom: '1rem', lineHeight: 1.2 }}>What Institutions<br />Actually Admit</p>
                 <p style={{ color: 'var(--muted)', fontSize: '0.88rem', lineHeight: '1.8', fontWeight: 300 }}>
@@ -116,8 +116,8 @@ export default function AboutPage() {
                 </p>
               </div>
             </AnimateOnScroll>
-            <AnimateOnScroll delay={300}>
-              <div style={{ padding: '2.5rem', border: '1px solid var(--border)', background: 'var(--bg-card)', position: 'relative' }}>
+            <AnimateOnScroll delay={300} style={{ height: '100%' }}>
+              <div style={{ height: '100%', padding: '2.5rem', border: '1px solid var(--border)', background: 'var(--bg-card)', position: 'relative' }}>
                 <span style={{ position: 'absolute', top: '-1px', left: '2.5rem', display: 'block', width: '40px', height: '2px', background: 'var(--crimson)' }} />
                 <p className="font-display" style={{ fontSize: '1.6rem', fontWeight: 300, color: 'var(--off-white)', marginBottom: '1rem', lineHeight: 1.2 }}>The Axiom<br />Difference</p>
                 <p style={{ color: 'var(--muted)', fontSize: '0.88rem', lineHeight: '1.8', fontWeight: 300 }}>

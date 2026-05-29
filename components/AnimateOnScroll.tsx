@@ -4,9 +4,10 @@ import { useRef, useEffect, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   delay?: number;
+  style?: React.CSSProperties;
 }
 
-export default function AnimateOnScroll({ children, delay = 0 }: Props) {
+export default function AnimateOnScroll({ children, delay = 0, style }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -35,6 +36,7 @@ export default function AnimateOnScroll({ children, delay = 0 }: Props) {
         opacity: 0,
         transform: 'translateY(28px)',
         transition: `opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms, transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`,
+        ...style,
       }}
     >
       {children}
