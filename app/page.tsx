@@ -49,7 +49,7 @@ export default function Home() {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        padding: '0 2.5rem 6rem',
+        padding: '5rem 2.5rem 6rem',
         position: 'relative',
         overflow: 'hidden',
       }}>
