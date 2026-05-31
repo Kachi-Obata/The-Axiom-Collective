@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'; // useState kept for menuOpen
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -11,15 +11,8 @@ const links = [
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -29,11 +22,6 @@ export default function Navbar() {
     <>
       <nav
         style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          zIndex: 1000,
           paddingTop: 'env(safe-area-inset-top, 0px)',
           paddingLeft: '2.5rem',
           paddingRight: '2.5rem',
@@ -42,10 +30,8 @@ export default function Navbar() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          transition: 'background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease',
-          background: scrolled ? 'rgba(10,10,10,0.95)' : 'var(--bg)',
-          backdropFilter: scrolled ? 'blur(12px)' : 'none',
-          borderBottom: scrolled ? '1px solid var(--border)' : '1px solid transparent',
+          background: 'var(--bg)',
+          borderBottom: '1px solid var(--border)',
         }}
       >
         {/* Logo */}
