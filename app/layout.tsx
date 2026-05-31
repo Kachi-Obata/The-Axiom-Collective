@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 
 // viewport-fit=cover extends the page coordinate system to the full screen
 // so the fixed nav can paint the notch/Dynamic Island area with the site
@@ -59,7 +60,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <main>{children}</main>
+        <main><PageTransition>{children}</PageTransition></main>
         <Footer />
         {gaId && (
           <>
