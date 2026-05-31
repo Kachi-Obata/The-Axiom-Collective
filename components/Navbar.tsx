@@ -30,15 +30,15 @@ export default function Navbar() {
       <nav
         style={{
           position: 'fixed',
-          top: 'env(safe-area-inset-top, 0px)',
+          top: 0,
           left: 0,
           right: 0,
           zIndex: 1000,
-          paddingTop: 0,
+          paddingTop: 'env(safe-area-inset-top, 0px)',
           paddingLeft: '2.5rem',
           paddingRight: '2.5rem',
           paddingBottom: 0,
-          height: '72px',
+          height: 'calc(72px + env(safe-area-inset-top, 0px))',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',

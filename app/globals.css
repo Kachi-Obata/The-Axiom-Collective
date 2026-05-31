@@ -35,17 +35,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.safari-top-fill {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: env(safe-area-inset-top, 0px);
-  background: var(--bg);
-  z-index: 1001;
-  pointer-events: none;
-}
-
 /* Grain overlay */
 body::before {
   content: '';
