@@ -129,6 +129,58 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* CRAFTING THE APPLICANT */}
+      <section className="section-padded" style={{
+        paddingLeft: '2.5rem',
+        paddingRight: '2.5rem',
+        borderTop: '1px solid var(--border)',
+        borderBottom: '1px solid var(--border)',
+      }}>
+        <div className="grid-2col" style={{ maxWidth: '1200px', margin: '0 auto', gap: '8rem', alignItems: 'center' }}>
+          <AnimateOnScroll>
+            <p style={{
+              fontFamily: 'DM Sans, sans-serif',
+              fontSize: '0.68rem',
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              color: 'var(--crimson)',
+              fontWeight: 500,
+              marginBottom: '1.5rem',
+            }}>
+              Our Method
+            </p>
+            <h2 className="font-display" style={{
+              fontSize: 'clamp(2.2rem, 3.5vw, 3.5rem)',
+              fontWeight: 300,
+              lineHeight: 1.1,
+              color: 'var(--off-white)',
+              letterSpacing: '-0.01em',
+            }}>
+              Crafting the Applicant,<br />
+              <em style={{ fontStyle: 'italic', color: 'var(--crimson)' }}>Not the Application.</em>
+            </h2>
+          </AnimateOnScroll>
+
+          <AnimateOnScroll delay={200}>
+            <blockquote className="font-display" style={{
+              fontSize: 'clamp(1.1rem, 1.7vw, 1.45rem)',
+              fontWeight: 300,
+              fontStyle: 'italic',
+              lineHeight: 1.55,
+              color: 'var(--off-white)',
+              marginBottom: '2rem',
+              borderLeft: '2px solid var(--crimson)',
+              paddingLeft: '1.75rem',
+            }}>
+              "We do not write applications for students. We help students discover, articulate, and present their own stories."
+            </blockquote>
+            <p style={{ color: 'var(--muted)', fontSize: '0.92rem', lineHeight: '1.85', fontWeight: 300 }}>
+              Applications emerge from a process of discovery, not manufacture. Our role is to ask the right questions, challenge comfortable narratives, and help each candidate locate the authentic core of their intellectual identity — then give it the precise, compelling language that elite institutions recognise. Every word a student submits belongs entirely to them.
+            </p>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
       {/* VALUES */}
       <section className="section-padded" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', maxWidth: '1200px', margin: '0 auto' }}>
         <AnimateOnScroll>
