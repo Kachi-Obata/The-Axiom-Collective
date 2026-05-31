@@ -87,30 +87,28 @@ export default function Footer() {
           <p style={{ color: 'var(--muted)', fontSize: '0.78rem', fontWeight: 300 }}>
             © {new Date().getFullYear()} The Axiom Collective. All rights reserved.
           </p>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-            <p style={{ color: 'var(--muted)', fontSize: '0.78rem', fontWeight: 300, fontStyle: 'italic', fontFamily: 'Cormorant Garamond, serif' }}>
-              Strategy. Positioning. Possibility.
-            </p>
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              aria-label="Back to top"
-              style={{
-                width: '40px',
-                height: '40px',
-                background: 'var(--crimson)',
-                border: 'none',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0,
-              }}
-            >
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 12V2M7 2L2 7M7 2L12 7" stroke="white" strokeWidth="1.5" strokeLinecap="square"/>
-              </svg>
-            </button>
-          </div>
+          <p style={{ color: 'var(--muted)', fontSize: '0.78rem', fontWeight: 300, fontStyle: 'italic', fontFamily: 'Cormorant Garamond, serif' }}>
+            Strategy. Positioning. Possibility.
+          </p>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            aria-label="Back to top"
+            style={{
+              width: '40px',
+              height: '40px',
+              background: 'var(--crimson)',
+              border: 'none',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexShrink: 0,
+            }}
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 12V2M7 2L2 7M7 2L12 7" stroke="white" strokeWidth="1.5" strokeLinecap="square"/>
+            </svg>
+          </button>
         </div>
       </div>
     </footer>
