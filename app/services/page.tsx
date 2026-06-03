@@ -15,7 +15,7 @@ const services = [
       'School-specific positioning strategy',
       'Competitive landscape analysis',
     ],
-    ideal: 'Graduates targeting top-20 global programs, competitive PhD placements, or elite MPP/MPA schools.',
+    ideal: 'Graduates targeting top-20 global programs, competitive PhD placements, or Fellowships/Grants.',
   },
   {
     number: '02',
@@ -45,22 +45,22 @@ const services = [
     ],
     ideal: 'Any applicant preparing written materials for elite postgraduate programs.',
   },
+  // {
+  //   number: '04',
+  //   title: 'Scholarship & Fellowship Positioning',
+  //   tagline: 'Funded ambition, strategically pursued.',
+  //   description: 'Strategic support for applicants targeting fully funded postgraduate programs, global fellowships, leadership scholarships, and competitive research grants.',
+  //   details: [
+  //     'Fellowship landscape mapping',
+  //     'Funding opportunity identification',
+  //     'Scholarship-specific narrative development',
+  //     'Application strategy for competitive funding',
+  //     'Post-acceptance fellowship positioning',
+  //   ],
+  //   ideal: 'Applicants targeting Rhodes, Chevening, Fulbright, Gates Cambridge, Schwarzman, and similar competitive awards.',
+  // },
   {
     number: '04',
-    title: 'Scholarship & Fellowship Positioning',
-    tagline: 'Funded ambition, strategically pursued.',
-    description: 'Strategic support for applicants targeting fully funded postgraduate programs, global fellowships, leadership scholarships, and competitive research grants.',
-    details: [
-      'Fellowship landscape mapping',
-      'Funding opportunity identification',
-      'Scholarship-specific narrative development',
-      'Application strategy for competitive funding',
-      'Post-acceptance fellowship positioning',
-    ],
-    ideal: 'Applicants targeting Rhodes, Chevening, Fulbright, Gates Cambridge, Schwarzman, and similar competitive awards.',
-  },
-  {
-    number: '05',
     title: 'Interview Preparation & Academic Communication',
     tagline: 'Intellectual confidence. Institutional fluency.',
     description: 'Preparation for admissions interviews, scholarship panels, and fellowship assessments — focused on intellectual confidence, clarity of thought, and demonstrated institutional fit.',
@@ -80,11 +80,10 @@ export default function ServicesPage() {
     <>
       {/* HERO */}
       <section style={{
-        minHeight: '55vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        padding: '0 2.5rem 6rem',
+        padding: '5rem 2.5rem 4rem',
         position: 'relative',
         overflow: 'hidden',
         borderBottom: '1px solid var(--border)',
@@ -106,7 +105,7 @@ export default function ServicesPage() {
             letterSpacing: '-0.02em',
             color: 'var(--off-white)',
           }}>
-            Five Disciplines.<br />
+            Four Disciplines.<br />
             One <em style={{ fontStyle: 'italic', color: 'var(--crimson)' }}>Strategic Purpose.</em>
           </h1>
         </div>
@@ -120,7 +119,7 @@ export default function ServicesPage() {
           </p>
         </AnimateOnScroll>
         <AnimateOnScroll delay={200}>
-          <p style={{ color: 'var(--muted)', fontSize: '0.92rem', lineHeight: '1.85', fontWeight: 300 }}>
+          <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300 }}>
             Every service the Axiom Collective offers is built around a single conviction: that the gap between talented candidates and elite institutions is almost always a positioning gap, not a merit gap. Our five disciplines address every dimension of that gap.
           </p>
         </AnimateOnScroll>
@@ -148,7 +147,7 @@ export default function ServicesPage() {
                   <p style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.1rem', fontStyle: 'italic', color: 'var(--crimson)', marginBottom: '2rem' }}>
                     {s.tagline}
                   </p>
-                  <p style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: '1.85', fontWeight: 300 }}>
+                  <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300 }}>
                     {s.description}
                   </p>
                 </div>
@@ -184,7 +183,7 @@ export default function ServicesPage() {
           <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 300, color: 'var(--off-white)', marginBottom: '1.5rem' }}>
             Not Sure Where to Start?
           </h2>
-          <p style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.8, fontWeight: 300, marginBottom: '3rem', maxWidth: '500px', margin: '0 auto 3rem' }}>
+          <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: 1.8, fontWeight: 300, marginBottom: '3rem', maxWidth: '500px', margin: '0 auto 3rem' }}>
             Book a consultation. We will evaluate your profile and recommend the precise combination of services to position you for your target institutions.
           </p>
           <Link href="/contact" style={{

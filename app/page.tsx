@@ -94,7 +94,7 @@ export default function Home() {
           <div className="animate-fade-up opacity-0-init delay-400" style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem', marginTop: '3rem' }}>
             <p style={{
               fontFamily: 'DM Sans, sans-serif',
-              fontSize: '1.05rem',
+              fontSize: '1.1rem',
               fontWeight: 300,
               lineHeight: 1.75,
               color: 'var(--muted)',
@@ -183,10 +183,10 @@ export default function Home() {
               </h2>
             </AnimateOnScroll>
             <AnimateOnScroll delay={150}>
-              <p style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '440px' }}>
+              <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '440px' }}>
                 Many exceptional candidates fail to access elite institutions not because they lack intelligence or potential — but because their stories are poorly articulated, their intellectual identities underdeveloped, and their profiles strategically incoherent.
               </p>
-              <p style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '440px', marginTop: '1.25rem' }}>
+              <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.8', fontWeight: 300, maxWidth: '440px', marginTop: '1.25rem' }}>
                 The Axiom Collective exists to bridge this gap.
               </p>
             </AnimateOnScroll>
@@ -206,7 +206,7 @@ export default function Home() {
                 }}>
                   <div>
                     <p style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.4rem', fontWeight: 400, color: 'var(--off-white)', marginBottom: '0.35rem' }}>{item.label}</p>
-                    <p style={{ color: 'var(--muted)', fontSize: '0.84rem', fontWeight: 300 }}>{item.desc}</p>
+                    <p style={{ color: 'var(--muted)', fontSize: '1rem', fontWeight: 300 }}>{item.desc}</p>
                   </div>
                   <span style={{ color: 'var(--crimson)', fontSize: '1.2rem', fontFamily: 'Cormorant Garamond, serif' }}>→</span>
                 </div>
@@ -257,7 +257,7 @@ export default function Home() {
                   <span style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.6rem', fontWeight: 300, color: 'var(--crimson)', letterSpacing: '0.08em' }}>{s.number}</span>
                   <div>
                     <p style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.5rem', fontWeight: 400, color: 'var(--off-white)', marginBottom: '0.4rem' }}>{s.title}</p>
-                    <p style={{ color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 300, lineHeight: '1.65', maxWidth: '600px' }}>{s.description}</p>
+                    <p style={{ color: 'var(--muted)', fontSize: '1rem', fontWeight: 300, lineHeight: '1.65', maxWidth: '600px' }}>{s.description}</p>
                   </div>
                   <span style={{ color: 'var(--crimson)', fontSize: '1.1rem', fontFamily: 'Cormorant Garamond, serif', opacity: 0.5 }}>→</span>
                 </div>
@@ -378,7 +378,7 @@ export default function Home() {
               Your Trajectory<br />
               <em style={{ fontStyle: 'italic', color: 'var(--crimson)' }}>Begins Here.</em>
             </h2>
-            <p style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.8, fontWeight: 300, marginBottom: '3rem', maxWidth: '500px', margin: '0 auto 3rem' }}>
+            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: 1.8, fontWeight: 300, marginBottom: '3rem', maxWidth: '500px', margin: '0 auto 3rem' }}>
               Book a consultation and take the first step toward a strategically positioned, globally compelling application.
             </p>
             <Link href="/contact" style={{

@@ -19,7 +19,7 @@ export default function Footer() {
           {/* Brand */}
           <div style={{ gridColumn: 'span 1' }}>
             <Image src="/logo.png" alt="The Axiom Collective" width={180} height={60} style={{ objectFit: 'contain', objectPosition: 'left', marginBottom: '1.5rem', display: 'block' }} />
-            <p style={{ color: 'var(--muted)', fontSize: '0.85rem', lineHeight: '1.7', fontWeight: 300, maxWidth: '260px' }}>
+            <p style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: '1.7', fontWeight: 300, maxWidth: '260px' }}>
               A strategic institution for globally ambitious minds.
             </p>
             <span style={{ display: 'block', width: '32px', height: '1px', background: 'var(--crimson)', marginTop: '1.5rem' }} />
@@ -29,7 +29,7 @@ export default function Footer() {
           <div>
             <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.7rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem', fontWeight: 500 }}>Navigate</p>
             {['Home', 'About', 'Services', 'Contact'].map(item => (
-              <Link key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} style={{ display: 'block', marginBottom: '0.75rem', color: 'var(--off-white)', textDecoration: 'none', fontSize: '0.88rem', fontWeight: 300, transition: 'color 0.2s' }}
+              <Link key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} style={{ display: 'block', marginBottom: '0.75rem', color: 'var(--off-white)', textDecoration: 'none', fontSize: '0.95rem', fontWeight: 300, transition: 'color 0.2s' }}
                 onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = 'var(--crimson)'}
                 onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = 'var(--off-white)'}
               >
@@ -42,7 +42,7 @@ export default function Footer() {
           <div>
             <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.7rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem', fontWeight: 500 }}>Services</p>
             {['Admissions Strategy', 'Research Identity', 'Narrative Architecture', 'Scholarship Positioning', 'Interview Preparation'].map(item => (
-              <p key={item} style={{ display: 'block', marginBottom: '0.75rem', color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 300 }}>
+              <p key={item} style={{ display: 'block', marginBottom: '0.75rem', color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 300 }}>
                 {item}
               </p>
             ))}
@@ -51,8 +51,8 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.7rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem', fontWeight: 500 }}>Contact</p>
-            <p style={{ color: 'var(--off-white)', fontSize: '0.88rem', fontWeight: 300, marginBottom: '0.75rem' }}>marius@theaxiomcollective.org</p>
-            <p style={{ color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 300, marginBottom: '2rem' }}>Africa & Global</p>
+            <p style={{ color: 'var(--off-white)', fontSize: '0.95rem', fontWeight: 300, marginBottom: '0.75rem' }}>marius@theaxiomcollective.org</p>
+            <p style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 300, marginBottom: '2rem' }}>Africa & Global</p>
             <Link href="/contact" style={{
               display: 'inline-block',
               fontFamily: 'DM Sans, sans-serif',

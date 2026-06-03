@@ -95,7 +95,7 @@ export default function ContactPage() {
           <h2 className="font-display" style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)', fontWeight: 300, color: 'var(--off-white)', marginBottom: '1.5rem', lineHeight: 1.1 }}>
             Your Inquiry<br />Has Been Received.
           </h2>
-          <p style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.8, fontWeight: 300, maxWidth: '440px', margin: '0 auto' }}>
+          <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: 1.8, fontWeight: 300, maxWidth: '440px', margin: '0 auto' }}>
             A member of the Axiom Collective will review your profile and reach out within 2–3 business days to schedule your consultation.
           </p>
           <span style={{ display: 'block', width: '1px', height: '60px', background: 'var(--crimson)', margin: '3rem auto 0' }} />
@@ -108,11 +108,10 @@ export default function ContactPage() {
     <>
       {/* HERO */}
       <section style={{
-        minHeight: '50vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        padding: '0 2.5rem 5rem',
+        padding: '5rem 2.5rem 4rem',
         position: 'relative',
         overflow: 'hidden',
         borderBottom: '1px solid var(--border)',
@@ -147,7 +146,7 @@ export default function ContactPage() {
               <h2 className="font-display" style={{ fontSize: '1.8rem', fontWeight: 300, color: 'var(--off-white)', marginBottom: '1.5rem', lineHeight: 1.2 }}>
                 What to Expect
               </h2>
-              <p style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '3rem' }}>
+              <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '3rem' }}>
                 Fill in your details and we will review your academic background, target institutions, and ambitions. A member of our team will reach out within 2–3 business days to schedule your consultation.
               </p>
 

@@ -23,11 +23,10 @@ export default function AboutPage() {
     <>
       {/* HERO */}
       <section style={{
-        minHeight: '60vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        padding: '0 2.5rem 6rem',
+        padding: '5rem 2.5rem 4rem',
         position: 'relative',
         overflow: 'hidden',
         borderBottom: '1px solid var(--border)',
@@ -64,10 +63,10 @@ export default function AboutPage() {
             <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 3vw, 2.8rem)', fontWeight: 300, lineHeight: 1.2, color: 'var(--off-white)', marginBottom: '2rem' }}>
               Who We Are
             </h2>
-            <p style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.25rem' }}>
+            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.25rem' }}>
               The Axiom Collective is a premium academic positioning and postgraduate admissions strategy firm dedicated to cultivating globally competitive scholars, researchers, professionals, and future leaders from Africa and beyond.
             </p>
-            <p style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: '1.85', fontWeight: 300 }}>
+            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300 }}>
               We exist at the intersection of elite postgraduate admissions, intellectual positioning, research identity formation, and global academic mobility.
             </p>
           </AnimateOnScroll>
@@ -102,7 +101,7 @@ export default function AboutPage() {
               <div style={{ height: '100%', padding: '2.5rem', border: '1px solid var(--border)', background: 'var(--bg-card)', position: 'relative' }}>
                 <span style={{ position: 'absolute', top: '-1px', left: '2.5rem', display: 'block', width: '40px', height: '2px', background: 'var(--crimson)' }} />
                 <p className="font-display" style={{ fontSize: '1.6rem', fontWeight: 300, color: 'var(--off-white)', marginBottom: '1rem', lineHeight: 1.2 }}>The Admissions<br />Fallacy</p>
-                <p style={{ color: 'var(--muted)', fontSize: '0.88rem', lineHeight: '1.8', fontWeight: 300 }}>
+                <p style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: '1.8', fontWeight: 300 }}>
                   Most talented applicants believe that strong grades and credentials alone will secure them elite admissions. This is the central fallacy The Axiom Collective was built to correct.
                 </p>
               </div>
@@ -111,7 +110,7 @@ export default function AboutPage() {
               <div style={{ height: '100%', padding: '2.5rem', border: '1px solid var(--border)', background: 'var(--bg-card)', position: 'relative' }}>
                 <span style={{ position: 'absolute', top: '-1px', left: '2.5rem', display: 'block', width: '40px', height: '2px', background: 'var(--crimson)' }} />
                 <p className="font-display" style={{ fontSize: '1.6rem', fontWeight: 300, color: 'var(--off-white)', marginBottom: '1rem', lineHeight: 1.2 }}>What Institutions<br />Actually Admit</p>
-                <p style={{ color: 'var(--muted)', fontSize: '0.88rem', lineHeight: '1.8', fontWeight: 300 }}>
+                <p style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: '1.8', fontWeight: 300 }}>
                   Elite institutions admit narratives, trajectories, and intellectual identities. They seek demonstrated potential and a compelling sense of where you are going — and why.
                 </p>
               </div>
@@ -120,7 +119,7 @@ export default function AboutPage() {
               <div style={{ height: '100%', padding: '2.5rem', border: '1px solid var(--border)', background: 'var(--bg-card)', position: 'relative' }}>
                 <span style={{ position: 'absolute', top: '-1px', left: '2.5rem', display: 'block', width: '40px', height: '2px', background: 'var(--crimson)' }} />
                 <p className="font-display" style={{ fontSize: '1.6rem', fontWeight: 300, color: 'var(--off-white)', marginBottom: '1rem', lineHeight: 1.2 }}>The Axiom<br />Difference</p>
-                <p style={{ color: 'var(--muted)', fontSize: '0.88rem', lineHeight: '1.8', fontWeight: 300 }}>
+                <p style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: '1.8', fontWeight: 300 }}>
                   We don't process applications. We architect intellectual identities. We align your story with the language, culture, and expectations of the world's most selective institutions.
                 </p>
               </div>
@@ -174,7 +173,7 @@ export default function AboutPage() {
             }}>
               "We do not write applications for students. We help students discover, articulate, and present their own stories."
             </blockquote>
-            <p style={{ color: 'var(--muted)', fontSize: '0.92rem', lineHeight: '1.85', fontWeight: 300 }}>
+            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300 }}>
               Applications emerge from a process of discovery, not manufacture. Our role is to ask the right questions, challenge comfortable narratives, and help each candidate locate the authentic core of their intellectual identity — then give it the precise, compelling language that elite institutions recognise. Every word a student submits belongs entirely to them.
             </p>
           </AnimateOnScroll>
@@ -196,7 +195,7 @@ export default function AboutPage() {
                 alignItems: 'start',
               }}>
                 <p className="font-display" style={{ fontSize: '1.4rem', fontWeight: 400, color: 'var(--off-white)' }}>{v.title}</p>
-                <p style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: '1.75', fontWeight: 300 }}>{v.desc}</p>
+                <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.75', fontWeight: 300 }}>{v.desc}</p>
               </div>
             </AnimateOnScroll>
           ))}
@@ -250,16 +249,16 @@ export default function AboutPage() {
               Founder
             </p>
 
-            <p style={{ color: 'var(--muted)', fontSize: '0.92rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
+            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
               Dr. Marius Isikalu is a researcher, academic strategist, and founder of The Axiom Collective, a premium postgraduate admissions and academic positioning consultancy dedicated to helping globally ambitious applicants gain admission into the world's leading universities and fellowship programs.
             </p>
-            <p style={{ color: 'var(--muted)', fontSize: '0.92rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
+            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
               With a strong background in research and intellectual development, he specialises in helping applicants strategically position themselves for elite postgraduate opportunities across the United States, the United Kingdom, and Europe. His work focuses on the deeper processes of narrative architecture and institutional positioning.
             </p>
-            <p style={{ color: 'var(--muted)', fontSize: '0.92rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
+            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
               Through The Axiom Collective, Dr. Isikalu has successfully guided applicants to institutions including Harvard University, Stanford University, Yale University, Columbia University, Johns Hopkins University, the London School of Economics, Imperial College London, and University College London, among others.
             </p>
-            <p style={{ color: 'var(--muted)', fontSize: '0.92rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '3rem' }}>
+            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '3rem' }}>
               His broader intellectual interests lie in global affairs, political theory, methodology, and the cultivation of globally competitive African scholars capable of shaping policy and leadership spaces internationally.
             </p>
 
@@ -293,7 +292,7 @@ export default function AboutPage() {
               Beyond Admissions.<br />
               <em style={{ fontStyle: 'italic', color: 'var(--crimson)' }}>An Intellectual Ecosystem.</em>
             </h2>
-            <p style={{ color: 'var(--muted)', fontSize: '0.92rem', lineHeight: '1.85', fontWeight: 300 }}>
+            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300 }}>
               The long-term ambition is to establish The Axiom Collective as a globally respected African institution for academic strategy, intellectual development, and scholar cultivation — far beyond the consultancy model.
             </p>
           </AnimateOnScroll>
@@ -317,7 +316,7 @@ export default function AboutPage() {
           <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 300, color: 'var(--off-white)', marginBottom: '1.5rem' }}>
             Ready to Be Positioned?
           </h2>
-          <p style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.8, fontWeight: 300, marginBottom: '3rem', maxWidth: '480px', margin: '0 auto 3rem' }}>
+          <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: 1.8, fontWeight: 300, marginBottom: '3rem', maxWidth: '480px', margin: '0 auto 3rem' }}>
             Book a consultation and let us begin architecting your path to the world's most selective institutions.
           </p>
           <Link href="/contact" style={{
