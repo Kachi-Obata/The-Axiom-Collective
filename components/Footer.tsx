@@ -51,7 +51,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.7rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem', fontWeight: 500 }}>Contact</p>
-            <p style={{ color: 'var(--off-white)', fontSize: '0.95rem', fontWeight: 300, marginBottom: '0.75rem' }}>marius@theaxiomcollective.org</p>
+            <p style={{ color: 'var(--off-white)', fontSize: '0.95rem', fontWeight: 300, marginBottom: '0.75rem' }}>ask@theaxiomcollective.org</p>
             <p style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 300, marginBottom: '2rem' }}>Africa & Global</p>
             <Link href="/contact" style={{
               display: 'inline-block',
