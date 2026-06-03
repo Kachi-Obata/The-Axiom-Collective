@@ -36,7 +36,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
-          <Image src="/symbol.png" alt="Axiom Collective" width={36} height={36} style={{ objectFit: 'contain' }} />
+          <Image src="/AxiomNavLogo.png" alt="Axiom Collective" width={200} height={45} style={{ objectFit: 'contain' }} />
         </Link>
 
         {/* Desktop Nav */}

@@ -254,7 +254,7 @@ export default function Home() {
                   borderBottom: '1px solid var(--border)',
                   transition: 'background 0.2s ease',
                 }}>
-                  <span style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '0.9rem', color: 'var(--crimson)', letterSpacing: '0.08em' }}>{s.number}</span>
+                  <span style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.6rem', fontWeight: 300, color: 'var(--crimson)', letterSpacing: '0.08em' }}>{s.number}</span>
                   <div>
                     <p style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.5rem', fontWeight: 400, color: 'var(--off-white)', marginBottom: '0.4rem' }}>{s.title}</p>
                     <p style={{ color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 300, lineHeight: '1.65', maxWidth: '600px' }}>{s.description}</p>
