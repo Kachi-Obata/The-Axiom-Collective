@@ -311,7 +311,7 @@ export default function ContactPage() {
                   fontWeight: 500,
                   letterSpacing: '0.14em',
                   textTransform: 'uppercase',
-                  color: 'var(--off-white)',
+                  color: loading ? 'var(--off-white)' : '#FFFFFF',
                   padding: '18px 36px',
                   background: loading ? 'transparent' : 'var(--crimson)',
                   border: '1px solid var(--crimson)',
@@ -321,8 +321,8 @@ export default function ContactPage() {
                   marginTop: '0.5rem',
                   opacity: loading ? 0.6 : 1,
                 }}
-                onMouseEnter={e => { if (!loading) (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
-                onMouseLeave={e => { if (!loading) (e.currentTarget as HTMLElement).style.background = 'var(--crimson)'; }}
+                onMouseEnter={e => { if (!loading) { (e.currentTarget as HTMLElement).style.background = 'transparent'; (e.currentTarget as HTMLElement).style.color = 'var(--off-white)'; } }}
+                onMouseLeave={e => { if (!loading) { (e.currentTarget as HTMLElement).style.background = 'var(--crimson)'; (e.currentTarget as HTMLElement).style.color = '#FFFFFF'; } }}
               >
                 {loading ? 'Sending...' : 'Submit Inquiry'}
               </button>

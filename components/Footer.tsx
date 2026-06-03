@@ -18,7 +18,7 @@ export default function Footer() {
         }}>
           {/* Brand */}
           <div style={{ gridColumn: 'span 1' }}>
-            <Image src="/axiom-logo-light.png" alt="The Axiom Collective" width={180} height={60} style={{ objectFit: 'contain', objectPosition: 'left', marginBottom: '1.5rem', display: 'block' }} />
+            <Image src="/logo.png" alt="The Axiom Collective" width={180} height={60} style={{ objectFit: 'contain', objectPosition: 'left', marginBottom: '1.5rem', display: 'block' }} />
             <p style={{ color: 'var(--muted)', fontSize: '0.85rem', lineHeight: '1.7', fontWeight: 300, maxWidth: '260px' }}>
               A strategic institution for globally ambitious minds.
             </p>
