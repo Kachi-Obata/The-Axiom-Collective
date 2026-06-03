@@ -327,15 +327,15 @@ export default function AboutPage() {
             letterSpacing: '0.14em',
             textTransform: 'uppercase',
             textDecoration: 'none',
-            color: 'var(--off-white)',
+            color: '#FFFFFF',
             padding: '16px 42px',
             background: 'var(--crimson)',
             border: '1px solid var(--crimson)',
             display: 'inline-block',
             transition: 'all 0.25s ease',
           }}
-            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--crimson)'; }}
+            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'transparent'; (e.currentTarget as HTMLElement).style.color = 'var(--off-white)'; }}
+            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--crimson)'; (e.currentTarget as HTMLElement).style.color = '#FFFFFF'; }}
           >
             Book a Consultation
           </Link>

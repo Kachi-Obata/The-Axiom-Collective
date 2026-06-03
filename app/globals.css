@@ -2,17 +2,17 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0A0A0A;
-  --bg-secondary: #111111;
-  --bg-card: #141414;
+  --bg: #FFFFFF;
+  --bg-secondary: #F7F7F5;
+  --bg-card: #F0EFED;
   --crimson: #C0272D;
   --crimson-light: #D93F46;
-  --crimson-dim: rgba(192, 39, 45, 0.15);
-  --off-white: #F5F0E8;
-  --muted: #8A8580;
-  --muted-light: #6B6560;
-  --border: rgba(245, 240, 232, 0.08);
-  --border-strong: rgba(245, 240, 232, 0.15);
+  --crimson-dim: rgba(192, 39, 45, 0.08);
+  --off-white: #1A1A1A;
+  --muted: #6B6B6B;
+  --muted-light: #999999;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.18);
 }
 
 * {
@@ -44,7 +44,7 @@ body::before {
   width: 100%;
   height: 100%;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-  opacity: 0.025;
+  opacity: 0.015;
   pointer-events: none;
   z-index: 9999;
 }
@@ -79,7 +79,7 @@ body::before {
 /* Selection */
 ::selection {
   background: var(--crimson);
-  color: var(--off-white);
+  color: #FFFFFF;
 }
 
 /* Animations */

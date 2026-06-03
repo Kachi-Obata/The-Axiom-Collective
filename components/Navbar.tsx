@@ -77,9 +77,11 @@ export default function Navbar() {
             }}
             onMouseEnter={e => {
               (e.currentTarget as HTMLElement).style.background = 'var(--crimson)';
+              (e.currentTarget as HTMLElement).style.color = '#FFFFFF';
             }}
             onMouseLeave={e => {
               (e.currentTarget as HTMLElement).style.background = 'transparent';
+              (e.currentTarget as HTMLElement).style.color = 'var(--off-white)';
             }}
           >
             Book Consultation
@@ -154,7 +156,7 @@ export default function Navbar() {
             letterSpacing: '0.12em',
             textTransform: 'uppercase',
             textDecoration: 'none',
-            color: 'var(--off-white)',
+            color: '#FFFFFF',
             padding: '14px 36px',
             border: '1px solid var(--crimson)',
             background: 'var(--crimson)',

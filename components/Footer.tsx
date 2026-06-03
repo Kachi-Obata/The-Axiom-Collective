@@ -64,10 +64,10 @@ export default function Footer() {
               color: 'var(--off-white)',
               padding: '10px 20px',
               border: '1px solid var(--crimson)',
-              transition: 'background 0.25s ease',
+              transition: 'all 0.25s ease',
             }}
-              onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = 'var(--crimson)'}
-              onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = 'transparent'}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--crimson)'; (e.currentTarget as HTMLElement).style.color = '#FFFFFF'; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'transparent'; (e.currentTarget as HTMLElement).style.color = 'var(--off-white)'; }}
             >
               Book Consultation
             </Link>

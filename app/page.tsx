@@ -111,15 +111,15 @@ export default function Home() {
                 letterSpacing: '0.12em',
                 textTransform: 'uppercase',
                 textDecoration: 'none',
-                color: 'var(--off-white)',
+                color: '#FFFFFF',
                 padding: '16px 36px',
                 background: 'var(--crimson)',
                 border: '1px solid var(--crimson)',
                 transition: 'all 0.25s ease',
                 display: 'inline-block',
               }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--crimson)'; }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'transparent'; (e.currentTarget as HTMLElement).style.color = 'var(--off-white)'; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--crimson)'; (e.currentTarget as HTMLElement).style.color = '#FFFFFF'; }}
               >
                 Book a Consultation
               </Link>
@@ -136,8 +136,8 @@ export default function Home() {
                 transition: 'all 0.25s ease',
                 display: 'inline-block',
               }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--crimson)'; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--border-strong)'; }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--crimson)'; (e.currentTarget as HTMLElement).style.color = 'var(--crimson)'; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--border-strong)'; (e.currentTarget as HTMLElement).style.color = 'var(--off-white)'; }}
               >
                 Our Services
               </Link>
@@ -388,15 +388,15 @@ export default function Home() {
               letterSpacing: '0.14em',
               textTransform: 'uppercase',
               textDecoration: 'none',
-              color: 'var(--off-white)',
+              color: '#FFFFFF',
               padding: '18px 48px',
               background: 'var(--crimson)',
               border: '1px solid var(--crimson)',
               display: 'inline-block',
               transition: 'all 0.25s ease',
             }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--crimson)'; }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'transparent'; (e.currentTarget as HTMLElement).style.color = 'var(--off-white)'; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--crimson)'; (e.currentTarget as HTMLElement).style.color = '#FFFFFF'; }}
             >
               Book a Consultation
             </Link>
