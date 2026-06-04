@@ -32,16 +32,16 @@ const services = [
 ];
 
 const logos = [
-  { src: '/logos/HARVARD-logo.svg.png', alt: 'Harvard', width: 110, height: 30 },
   { src: '/logos/YALEUni-logo.png', alt: 'Yale', width: 120, height: 32 },
-  { src: '/logos/COLUMBIA-Logo-updated.png', alt: 'Columbia', width: 160, height: 36, scale: 1.4 },
+  { src: '/logos/HARVARD-logo.svg.png', alt: 'Harvard', width: 110, height: 30 },
+  { src: '/logos/COLUMBIA-Logo-updated.png', alt: 'Columbia', width: 110, height: 36, scale: 1.6 },
   { src: '/logos/LSEecons-polsci-logo.svg.png', alt: 'LSE', width: 120, height: 32 },
   { src: '/logos/IMPERIAL-College-London-Logo.png', alt: 'Imperial College London', width: 110, height: 30 },
-  { src: '/logos/UCL-logo-dark.png', alt: 'UCL', width: 110, height: 30 },
-  { src: '/logos/JOHNHOPKINS-logo.png', alt: 'Johns Hopkins', width: 120, height: 32 },
+  { src: '/logos/UCL-logo-dark.png', alt: 'UCL', width: 110, height: 30, gap: '1rem' },
+  { src: '/logos/JOHNHOPKINS-logo.png', alt: 'Johns Hopkins', width: 120, height: 32, gap: '1rem' },
   { src: '/logos/EMORYUni-logo.png', alt: 'Emory', width: 90, height: 26 },
-  { src: '/logos/BROWNUni-logo.png', alt: 'Brown', width: 110, height: 30 },
-  { src: '/logos/LSHTM-logo.png', alt: 'LSHTM', width: 140, height: 34 },
+  { src: '/logos/BROWNUni-logo.png', alt: 'Brown', width: 110, height: 30, gap: '0.4rem' },
+  { src: '/logos/LSHTM-logo.png', alt: 'LSHTM', width: 140, height: 34, gap: '1rem' },
 ];
 
 const philosophy = [
@@ -162,7 +162,7 @@ export default function Home() {
       <section style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '1.25rem 0', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
         <div className="logo-ticker" style={{ display: 'flex', alignItems: 'center', animation: 'ticker 30s linear infinite', whiteSpace: 'nowrap', willChange: 'transform', width: 'max-content' }}>
           {[...logos, ...logos, ...logos].map((logo, i) => (
-            <div key={i} style={{ flexShrink: 0, height: `${logo.height}px`, position: 'relative', width: `${logo.width}px`, marginRight: '4rem' }}>
+            <div key={i} style={{ flexShrink: 0, height: `${logo.height}px`, position: 'relative', width: `${logo.width}px`, marginRight: logo.gap ?? '2rem' }}>
               <Image
                 src={logo.src}
                 alt={logo.alt}
