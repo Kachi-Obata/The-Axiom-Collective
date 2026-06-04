@@ -160,7 +160,7 @@ export default function Home() {
 
       {/* INSTITUTIONS TICKER */}
       <section style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '2rem 0', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '4rem', animation: 'ticker 30s linear infinite', whiteSpace: 'nowrap' }}>
+        <div className="logo-ticker" style={{ display: 'flex', alignItems: 'center', gap: '4rem', animation: 'ticker 30s linear infinite', whiteSpace: 'nowrap' }}>
           {[...logos, ...logos].map((logo, i) => (
             <div key={i} style={{ flexShrink: 0, height: `${logo.height}px`, position: 'relative', width: `${logo.width}px` }}>
               <Image
@@ -177,6 +177,9 @@ export default function Home() {
           @keyframes ticker {
             from { transform: translateX(0); }
             to   { transform: translateX(-50%); }
+          }
+          @media (max-width: 768px) {
+            .logo-ticker { animation-duration: 15s !important; }
           }
         `}</style>
       </section>
