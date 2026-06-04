@@ -32,16 +32,16 @@ const services = [
 ];
 
 const logos = [
-  { src: '/logos/HARVARD-logo.svg.png', alt: 'Harvard' },
-  { src: '/logos/YALEUni-logo.png', alt: 'Yale' },
-  { src: '/logos/COLUMBIA-logo.png', alt: 'Columbia' },
-  { src: '/logos/LSEecons-polsci-logo.svg.png', alt: 'LSE' },
-  { src: '/logos/IMPERIAL-College-London-Logo.png', alt: 'Imperial College London' },
-  { src: '/logos/UCL-logo.png', alt: 'UCL' },
-  { src: '/logos/JOHNHOPKINS-logo.png', alt: 'Johns Hopkins' },
-  { src: '/logos/EMORYUni-logo.png', alt: 'Emory' },
-  { src: '/logos/BROWNUni-logo.png', alt: 'Brown' },
-  { src: '/logos/LSHTM-logo.png', alt: 'LSHTM' },
+  { src: '/logos/HARVARD-logo.svg.png', alt: 'Harvard', width: 145, height: 50 },
+  { src: '/logos/YALEUni-logo.png', alt: 'Yale', width: 180, height: 64 },
+  { src: '/logos/COLUMBIA-Logo-updated.png', alt: 'Columbia', width: 280, height: 92 },
+  { src: '/logos/LSEecons-polsci-logo.svg.png', alt: 'LSE', width: 160, height: 56 },
+  { src: '/logos/IMPERIAL-College-London-Logo.png', alt: 'Imperial College London', width: 145, height: 48 },
+  { src: '/logos/UCL-logo-dark.png', alt: 'UCL', width: 150, height: 48 },
+  { src: '/logos/JOHNHOPKINS-logo.png', alt: 'Johns Hopkins', width: 160, height: 48 },
+  { src: '/logos/EMORYUni-logo.png', alt: 'Emory', width: 110, height: 40 },
+  { src: '/logos/BROWNUni-logo.png', alt: 'Brown', width: 150, height: 48 },
+  { src: '/logos/LSHTM-logo.png', alt: 'LSHTM', width: 200, height: 64 },
 ];
 
 const philosophy = [
@@ -162,13 +162,13 @@ export default function Home() {
       <section style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '2rem 0', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '4rem', animation: 'ticker 30s linear infinite', whiteSpace: 'nowrap' }}>
           {[...logos, ...logos].map((logo, i) => (
-            <div key={i} style={{ flexShrink: 0, height: '36px', position: 'relative', width: '120px' }}>
+            <div key={i} style={{ flexShrink: 0, height: `${logo.height}px`, position: 'relative', width: `${logo.width}px` }}>
               <Image
                 src={logo.src}
                 alt={logo.alt}
                 fill
-                style={{ objectFit: 'contain', objectPosition: 'center', filter: 'grayscale(100%) opacity(0.45)' }}
-                sizes="120px"
+                style={{ objectFit: 'contain', objectPosition: 'center', filter: 'opacity(0.7)' }}
+                sizes={`${logo.width}px`}
               />
             </div>
           ))}
