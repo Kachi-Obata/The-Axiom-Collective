@@ -318,7 +318,7 @@ export default function Home() {
             {/* Photo */}
             <div style={{ position: 'relative', width: '100%', aspectRatio: '3 / 4' }}>
               <Image
-                src="/marius.png"
+                src="/people/marius.png"
                 alt="Dr. Marius Isikalu"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'center top' }}

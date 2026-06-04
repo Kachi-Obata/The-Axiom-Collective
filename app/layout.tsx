@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/brand/og-image.png",
         width: 1200,
         height: 630,
         alt: "The Axiom Collective — Strategy. Positioning. Possibility.",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Axiom Collective | Strategy. Positioning. Possibility.",
     description: "Africa's leading academic positioning and postgraduate admissions strategy firm.",
-    images: ["/og-image.png"],
+    images: ["/brand/og-image.png"],
   },
   // Favicon: handled via file-based metadata (app/icon.png + app/apple-icon.png).
   // Next.js auto-generates <link rel="icon"> and <link rel="apple-touch-icon"> from those files.
