@@ -32,10 +32,10 @@ const services = [
 ];
 
 const logos = [
-  { src: '/logos/YALEUni-logo.png', alt: 'Yale', width: 120, height: 32 },
+  { src: '/logos/YALEUni-logo.png', alt: 'Yale', width: 120, height: 32, gap: '3rem' },
   { src: '/logos/HARVARD-logo.svg.png', alt: 'Harvard', width: 110, height: 30 },
   { src: '/logos/COLUMBIA-Logo-updated.png', alt: 'Columbia', width: 110, height: 36, scale: 1.6 },
-  { src: '/logos/LSEecons-polsci-logo.svg.png', alt: 'LSE', width: 120, height: 32 },
+  { src: '/logos/LSEecons-polsci-logo.svg.png', alt: 'LSE', width: 120, height: 32, gap: '3rem' },
   { src: '/logos/IMPERIAL-College-London-Logo.png', alt: 'Imperial College London', width: 110, height: 30 },
   { src: '/logos/UCL-logo-dark.png', alt: 'UCL', width: 110, height: 30, gap: '1rem' },
   { src: '/logos/JOHNHOPKINS-logo.png', alt: 'Johns Hopkins', width: 120, height: 32, gap: '1rem' },
@@ -167,7 +167,7 @@ export default function Home() {
                 src={logo.src}
                 alt={logo.alt}
                 fill
-                style={{ objectFit: 'contain', objectPosition: 'center', filter: 'opacity(0.7)', transform: logo.scale ? `scale(${logo.scale})` : undefined }}
+                style={{ objectFit: 'contain', objectPosition: 'center', filter: 'opacity(0.7)', transform: `scale(${logo.scale ?? 1.3})` }}
                 sizes={`${logo.width}px`}
               />
             </div>
