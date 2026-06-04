@@ -21,11 +21,6 @@ const services = [
   },
   {
     number: '04',
-    title: 'Scholarship & Fellowship Positioning',
-    description: 'Strategic support for fully funded programs, global fellowships, leadership scholarships, and competitive research grants.',
-  },
-  {
-    number: '05',
     title: 'Interview Preparation',
     description: 'Preparation for admissions and fellowship panels focused on intellectual confidence, clarity, and demonstrated institutional fit.',
   },
