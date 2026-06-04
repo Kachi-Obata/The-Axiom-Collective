@@ -32,16 +32,16 @@ const services = [
 ];
 
 const logos = [
-  { src: '/logos/HARVARD-logo.svg.png', alt: 'Harvard', width: 145, height: 50 },
-  { src: '/logos/YALEUni-logo.png', alt: 'Yale', width: 180, height: 64 },
-  { src: '/logos/COLUMBIA-Logo-updated.png', alt: 'Columbia', width: 280, height: 92 },
-  { src: '/logos/LSEecons-polsci-logo.svg.png', alt: 'LSE', width: 160, height: 56 },
-  { src: '/logos/IMPERIAL-College-London-Logo.png', alt: 'Imperial College London', width: 145, height: 48 },
-  { src: '/logos/UCL-logo-dark.png', alt: 'UCL', width: 150, height: 48 },
-  { src: '/logos/JOHNHOPKINS-logo.png', alt: 'Johns Hopkins', width: 160, height: 48 },
-  { src: '/logos/EMORYUni-logo.png', alt: 'Emory', width: 110, height: 40 },
-  { src: '/logos/BROWNUni-logo.png', alt: 'Brown', width: 150, height: 48 },
-  { src: '/logos/LSHTM-logo.png', alt: 'LSHTM', width: 200, height: 64 },
+  { src: '/logos/HARVARD-logo.svg.png', alt: 'Harvard', width: 110, height: 30 },
+  { src: '/logos/YALEUni-logo.png', alt: 'Yale', width: 120, height: 32 },
+  { src: '/logos/COLUMBIA-Logo-updated.png', alt: 'Columbia', width: 160, height: 36, scale: 1.4 },
+  { src: '/logos/LSEecons-polsci-logo.svg.png', alt: 'LSE', width: 120, height: 32 },
+  { src: '/logos/IMPERIAL-College-London-Logo.png', alt: 'Imperial College London', width: 110, height: 30 },
+  { src: '/logos/UCL-logo-dark.png', alt: 'UCL', width: 110, height: 30 },
+  { src: '/logos/JOHNHOPKINS-logo.png', alt: 'Johns Hopkins', width: 120, height: 32 },
+  { src: '/logos/EMORYUni-logo.png', alt: 'Emory', width: 90, height: 26 },
+  { src: '/logos/BROWNUni-logo.png', alt: 'Brown', width: 110, height: 30 },
+  { src: '/logos/LSHTM-logo.png', alt: 'LSHTM', width: 140, height: 34 },
 ];
 
 const philosophy = [
@@ -159,15 +159,15 @@ export default function Home() {
       </section>
 
       {/* INSTITUTIONS TICKER */}
-      <section style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '2rem 0', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
-        <div className="logo-ticker" style={{ display: 'flex', alignItems: 'center', gap: '4rem', animation: 'ticker 30s linear infinite', whiteSpace: 'nowrap' }}>
+      <section style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '1.25rem 0', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
+        <div className="logo-ticker" style={{ display: 'flex', alignItems: 'center', animation: 'ticker 30s linear infinite', whiteSpace: 'nowrap', willChange: 'transform', width: 'max-content' }}>
           {[...logos, ...logos, ...logos].map((logo, i) => (
-            <div key={i} style={{ flexShrink: 0, height: `${logo.height}px`, position: 'relative', width: `${logo.width}px` }}>
+            <div key={i} style={{ flexShrink: 0, height: `${logo.height}px`, position: 'relative', width: `${logo.width}px`, marginRight: '4rem' }}>
               <Image
                 src={logo.src}
                 alt={logo.alt}
                 fill
-                style={{ objectFit: 'contain', objectPosition: 'center', filter: 'opacity(0.7)' }}
+                style={{ objectFit: 'contain', objectPosition: 'center', filter: 'opacity(0.7)', transform: logo.scale ? `scale(${logo.scale})` : undefined }}
                 sizes={`${logo.width}px`}
               />
             </div>
@@ -179,7 +179,7 @@ export default function Home() {
             to   { transform: translateX(-33.33%); }
           }
           @media (max-width: 768px) {
-            .logo-ticker { animation-duration: 10s !important; }
+            .logo-ticker { animation-duration: 25s !important; }
           }
         `}</style>
       </section>
