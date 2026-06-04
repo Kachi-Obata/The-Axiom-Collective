@@ -31,7 +31,18 @@ const services = [
   },
 ];
 
-const institutions = ['Harvard', 'Oxford', 'Stanford', 'Cambridge', 'Yale', 'LSE', 'Columbia', 'Imperial', 'UCL'];
+const logos = [
+  { src: '/logos/HARVARD-logo.svg.png', alt: 'Harvard' },
+  { src: '/logos/YALEUni-logo.png', alt: 'Yale' },
+  { src: '/logos/COLUMBIA-logo.png', alt: 'Columbia' },
+  { src: '/logos/LSEecons-polsci-logo.svg.png', alt: 'LSE' },
+  { src: '/logos/IMPERIAL-College-London-Logo.png', alt: 'Imperial College London' },
+  { src: '/logos/UCL-logo.png', alt: 'UCL' },
+  { src: '/logos/JOHNHOPKINS-logo.png', alt: 'Johns Hopkins' },
+  { src: '/logos/EMORYUni-logo.png', alt: 'Emory' },
+  { src: '/logos/BROWNUni-logo.png', alt: 'Brown' },
+  { src: '/logos/LSHTM-logo.png', alt: 'LSHTM' },
+];
 
 const philosophy = [
   { label: 'Narrative Construction', desc: 'Your story, precisely told.' },
@@ -148,19 +159,18 @@ export default function Home() {
       </section>
 
       {/* INSTITUTIONS TICKER */}
-      <section style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '1.5rem 0', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
-        <div style={{ display: 'flex', gap: '4rem', animation: 'ticker 20s linear infinite', whiteSpace: 'nowrap' }}>
-          {[...institutions, ...institutions].map((inst, i) => (
-            <span key={i} style={{
-              fontFamily: 'Cormorant Garamond, serif',
-              fontSize: '1rem',
-              fontWeight: 300,
-              fontStyle: 'italic',
-              color: 'var(--muted)',
-              letterSpacing: '0.06em',
-            }}>
-              {inst}
-            </span>
+      <section style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '2rem 0', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '4rem', animation: 'ticker 30s linear infinite', whiteSpace: 'nowrap' }}>
+          {[...logos, ...logos].map((logo, i) => (
+            <div key={i} style={{ flexShrink: 0, height: '36px', position: 'relative', width: '120px' }}>
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                fill
+                style={{ objectFit: 'contain', objectPosition: 'center', filter: 'grayscale(100%) opacity(0.45)' }}
+                sizes="120px"
+              />
+            </div>
           ))}
         </div>
         <style>{`
