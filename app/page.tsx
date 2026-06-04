@@ -28,8 +28,8 @@ const services = [
 
 const logos = [
   { src: '/logos/YALEUni-logo.png', alt: 'Yale', width: 120, height: 32, gap: '3rem' },
-  { src: '/logos/HARVARD-logo.svg.png', alt: 'Harvard', width: 110, height: 30 },
-  { src: '/logos/COLUMBIA-Logo-updated.png', alt: 'Columbia', width: 110, height: 36, scale: 1.6 },
+  { src: '/logos/HARVARD-logo.svg.png', alt: 'Harvard', width: 110, height: 30, gap: '1rem' },
+  { src: '/logos/COLUMBIA-Logo-updated.png', alt: 'Columbia', width: 110, height: 36, scale: 1.6, gap: '1rem' },
   { src: '/logos/LSEecons-polsci-logo.svg.png', alt: 'LSE', width: 120, height: 32, gap: '3rem' },
   { src: '/logos/IMPERIAL-College-London-Logo.png', alt: 'Imperial College London', width: 110, height: 30 },
   { src: '/logos/UCL-logo-dark.png', alt: 'UCL', width: 110, height: 30, gap: '1rem' },
@@ -58,6 +58,7 @@ export default function Home() {
         padding: '5rem 2.5rem 6rem',
         position: 'relative',
         overflow: 'hidden',
+        borderBottom: '1px solid var(--border)',
       }}>
         <div style={{
           position: 'absolute',
@@ -154,7 +155,7 @@ export default function Home() {
       </section>
 
       {/* INSTITUTIONS TICKER */}
-      <section style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '1.25rem 0', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
+      {/* <section style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '1.25rem 0', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
         <div className="logo-ticker" style={{ display: 'flex', alignItems: 'center', animation: 'ticker 30s linear infinite', whiteSpace: 'nowrap', willChange: 'transform', width: 'max-content' }}>
           {[...logos, ...logos, ...logos].map((logo, i) => (
             <div key={i} style={{ flexShrink: 0, height: `${logo.height}px`, position: 'relative', width: `${logo.width}px`, marginRight: logo.gap ?? '2rem' }}>
@@ -177,10 +178,10 @@ export default function Home() {
             .logo-ticker { animation-duration: 30s !important; }
           }
         `}</style>
-      </section>
+      </section> */}
 
       {/* PHILOSOPHY */}
-      <section className="section-padded" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', maxWidth: '1200px', margin: '0 auto' }}>
+      <section className="section-padded" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', maxWidth: '1200px', margin: '0 auto', paddingTop: '4rem' }}>
         <div className="grid-2col" style={{ gap: '6rem', alignItems: 'start' }}>
           <div>
             <AnimateOnScroll>

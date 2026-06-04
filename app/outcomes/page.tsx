@@ -5,6 +5,19 @@ import Link from 'next/link';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 import Lightbox from '@/components/Lightbox';
 
+const outcomeLogos = [
+  { src: '/logos/YALEUni-logo.png', alt: 'Yale', width: 120, height: 32, gap: '3rem' },
+  { src: '/logos/HARVARD-logo.svg.png', alt: 'Harvard', width: 110, height: 30, gap: '1rem' },
+  { src: '/logos/COLUMBIA-Logo-updated.png', alt: 'Columbia', width: 110, height: 36, scale: 1.6, gap: '1rem' },
+  { src: '/logos/LSEecons-polsci-logo.svg.png', alt: 'LSE', width: 120, height: 32, gap: '3rem' },
+  { src: '/logos/IMPERIAL-College-London-Logo.png', alt: 'Imperial College London', width: 110, height: 30 },
+  { src: '/logos/UCL-logo-dark.png', alt: 'UCL', width: 110, height: 30, gap: '1rem' },
+  { src: '/logos/JOHNHOPKINS-logo.png', alt: 'Johns Hopkins', width: 120, height: 32, gap: '1rem' },
+  { src: '/logos/EMORYUni-logo.png', alt: 'Emory', width: 90, height: 26 },
+  { src: '/logos/BROWNUni-logo.png', alt: 'Brown', width: 110, height: 30, gap: '0.4rem' },
+  { src: '/logos/LSHTM-logo.png', alt: 'LSHTM', width: 140, height: 34, gap: '1rem' },
+];
+
 // Add filenames here as letters become available
 const AVAILABLE_LETTERS = new Set([
   '/results/letters/gayus-harvard.jpg',
@@ -180,7 +193,7 @@ export default function ResultsPage() {
         }} />
         <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%', position: 'relative', zIndex: 1 }}>
           <div className="animate-fade-up opacity-0-init" style={{ marginBottom: '2rem' }}>
-            <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500 }}>Our Results</span>
+            <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500 }}>Our Outcomes</span>
           </div>
           <h1 className="font-display animate-fade-up opacity-0-init delay-200" style={{
             fontSize: 'clamp(3.5rem, 8vw, 6.5rem)',
@@ -234,6 +247,32 @@ export default function ResultsPage() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* INSTITUTION LOGOS TICKER */}
+      <section style={{ borderBottom: '1px solid var(--border)', padding: '1.25rem 0', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
+        <div className="logo-ticker" style={{ display: 'flex', alignItems: 'center', animation: 'ticker 30s linear infinite', whiteSpace: 'nowrap', willChange: 'transform', width: 'max-content' }}>
+          {[...outcomeLogos, ...outcomeLogos, ...outcomeLogos].map((logo, i) => (
+            <div key={i} style={{ flexShrink: 0, height: `${logo.height}px`, position: 'relative', width: `${logo.width}px`, marginRight: logo.gap ?? '2rem' }}>
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                fill
+                style={{ objectFit: 'contain', objectPosition: 'center', filter: 'opacity(0.7)', transform: `scale(${logo.scale ?? 1.3})` }}
+                sizes={`${logo.width}px`}
+              />
+            </div>
+          ))}
+        </div>
+        <style>{`
+          @keyframes ticker {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-33.33%); }
+          }
+          @media (max-width: 768px) {
+            .logo-ticker { animation-duration: 30s !important; }
+          }
+        `}</style>
       </section>
 
       {/* SCHOLAR 01 — E. GAYUS */}

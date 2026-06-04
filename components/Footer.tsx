@@ -28,7 +28,7 @@ export default function Footer() {
           {/* Navigation */}
           <div>
             <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.7rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem', fontWeight: 500 }}>Navigate</p>
-            {['Home', 'About', 'Services', 'Method', 'Results', 'Contact'].map(item => (
+            {['Home', 'About', 'Services', 'Method', 'Outcomes', 'Contact'].map(item => (
               <Link key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} style={{ display: 'block', marginBottom: '0.75rem', color: 'var(--off-white)', textDecoration: 'none', fontSize: '0.95rem', fontWeight: 300, transition: 'color 0.2s' }}
                 onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = 'var(--crimson)'}
                 onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = 'var(--off-white)'}
