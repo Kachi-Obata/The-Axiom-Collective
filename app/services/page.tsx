@@ -120,7 +120,7 @@ export default function ServicesPage() {
         </AnimateOnScroll>
         <AnimateOnScroll delay={200}>
           <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300 }}>
-            Every service the Axiom Collective offers is built around a single conviction: that the gap between talented candidates and elite institutions is almost always a positioning gap, not a merit gap. Our five disciplines address every dimension of that gap.
+            Every service the Axiom Collective offers is built around a single conviction: that the gap between talented candidates and elite institutions is almost always a positioning gap, not a merit gap. Our four disciplines address every dimension of that gap.
           </p>
         </AnimateOnScroll>
       </section>
