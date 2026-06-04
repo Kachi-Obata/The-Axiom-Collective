@@ -26,7 +26,7 @@ export default function MethodPage() {
             <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500 }}>Our Framework</span>
           </div>
           <h1 className="font-display animate-fade-up opacity-0-init delay-200" style={{
-            fontSize: 'clamp(3rem, 6vw, 6.5rem)',
+            fontSize: 'clamp(3.5rem, 8vw, 6.5rem)',
             fontWeight: 300,
             lineHeight: 1.0,
             letterSpacing: '-0.02em',

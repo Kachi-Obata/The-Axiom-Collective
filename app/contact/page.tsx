@@ -124,7 +124,7 @@ export default function ContactPage() {
         }} />
         <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%', position: 'relative', zIndex: 1 }}>
           <h1 className="font-display animate-fade-up opacity-0-init" style={{
-            fontSize: 'clamp(3rem, 6vw, 6rem)',
+            fontSize: 'clamp(3.5rem, 8vw, 6rem)',
             fontWeight: 300,
             lineHeight: 1.0,
             letterSpacing: '-0.02em',

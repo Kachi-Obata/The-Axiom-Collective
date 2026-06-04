@@ -1,7 +1,11 @@
 'use client';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
+import Lightbox from '@/components/Lightbox';
+
+const MARIUS_LETTER = '/results/letters/marius-harvard.jpg';
 
 const values = [
   { title: 'Intellectual Rigor', desc: 'Analytical depth, academic seriousness, and intellectual precision in everything we do.' },
@@ -19,6 +23,8 @@ const vision = [
 ];
 
 export default function AboutPage() {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+
   return (
     <>
       {/* HERO */}
@@ -43,7 +49,7 @@ export default function AboutPage() {
             <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500 }}>About the Collective</span>
           </div>
           <h1 className="font-display animate-fade-up opacity-0-init delay-200" style={{
-            fontSize: 'clamp(3rem, 6vw, 6.5rem)',
+            fontSize: 'clamp(3.5rem, 8vw, 6.5rem)',
             fontWeight: 300,
             lineHeight: 1.0,
             letterSpacing: '-0.02em',
@@ -282,6 +288,35 @@ export default function AboutPage() {
                 "Exceptional applicants are not manufactured through templates; they are cultivated through strategy and intellectual authenticity."
               </blockquote>
             </div>
+
+            {/* Admission */}
+            <div style={{ borderTop: '1px solid var(--border)', marginTop: '2rem', paddingTop: '1.5rem' }}>
+              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.68rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '0.75rem' }}>
+                Admission
+              </p>
+              <p style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.05rem', color: 'var(--off-white)', fontWeight: 400, marginBottom: '0.25rem' }}>
+                Harvard University
+              </p>
+              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.78rem', fontWeight: 300, color: 'var(--muted)', marginBottom: '0.6rem', lineHeight: 1.5 }}>
+                Master of Education (Ed.M.) · Learning Design, Innovation, and Technology · Graduate School of Education
+              </p>
+              <button
+                onClick={() => setLightbox({ src: MARIUS_LETTER, alt: 'Harvard University admission letter' })}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  fontFamily: 'DM Sans, sans-serif',
+                  fontSize: '0.72rem',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                  color: 'var(--crimson)',
+                  padding: 0,
+                }}
+              >
+                View Letter →
+              </button>
+            </div>
           </AnimateOnScroll>
 
         </div>
@@ -343,6 +378,13 @@ export default function AboutPage() {
           </Link>
         </AnimateOnScroll>
       </section>
+
+      <Lightbox
+        src={lightbox?.src ?? ''}
+        alt={lightbox?.alt ?? ''}
+        isOpen={lightbox !== null}
+        onClose={() => setLightbox(null)}
+      />
     </>
   );
 }
