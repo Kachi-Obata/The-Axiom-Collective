@@ -250,16 +250,19 @@ export default function AboutPage() {
             </p>
 
             <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
-              Dr. Marius Isikalu is a researcher, academic strategist, and founder of The Axiom Collective, a premium postgraduate admissions and academic positioning consultancy dedicated to helping globally ambitious applicants gain admission into the world's leading universities and fellowship programs.
+              Dr. Marius Isikalu is a researcher, policy strategist, and founder of The Axiom Collective, a premium postgraduate admissions and academic positioning consultancy dedicated to helping globally ambitious applicants gain admission into the world's leading universities, fellowship programmes, and leadership development opportunities.
             </p>
             <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
-              With a strong background in research and intellectual development, he specialises in helping applicants strategically position themselves for elite postgraduate opportunities across the United States, the United Kingdom, and Europe. His work focuses on the deeper processes of narrative architecture and institutional positioning.
+              His work is founded on a simple principle: exceptional applications emerge from exceptional applicants. Rather than focusing solely on admissions documents, he works closely with candidates to develop intellectual identity, narrative coherence, strategic positioning, and long-term academic distinction. Through this approach, he helps applicants present not only achievement, but also the clarity and purpose sought by the world's most selective institutions.
             </p>
             <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
-              Through The Axiom Collective, Dr. Isikalu has successfully guided applicants to institutions including Harvard University, Stanford University, Yale University, Columbia University, Johns Hopkins University, the London School of Economics, Imperial College London, and University College London, among others.
+              Dr. Isikalu serves as Head of Strategy and Methodology to the Senior Special Assistant to the President of Nigeria on Technical, Vocational and Entrepreneurship Education, where he contributes to the design of strategic initiatives aimed at advancing educational development, talent cultivation, and human capital formation. His experience at the intersection of policy, education, and leadership informs his distinctive approach to applicant development and academic mentorship.
+            </p>
+            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
+              Through The Axiom Collective, he has successfully guided candidates to institutions including Harvard University, Stanford University, Yale University, Columbia University, Johns Hopkins University, the London School of Economics, Brown University, and University College London, among others. His work focuses on helping applicants navigate highly competitive admissions environments through deliberate profile development, compelling personal narratives, and strategic institutional alignment.
             </p>
             <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '3rem' }}>
-              His broader intellectual interests lie in global affairs, political theory, methodology, and the cultivation of globally competitive African scholars capable of shaping policy and leadership spaces internationally.
+              Dr. Isikalu holds a PhD in Political Science and maintains active interests in global affairs, political theory, research methodology, educational development, and leadership formation. He is particularly committed to cultivating a new generation of globally competitive African scholars, professionals, and policy leaders capable of contributing meaningfully to international academic, policy, and leadership spaces.
             </p>
 
             {/* Pull quote */}

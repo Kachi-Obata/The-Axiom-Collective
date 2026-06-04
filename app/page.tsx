@@ -179,7 +179,7 @@ export default function Home() {
             to   { transform: translateX(-33.33%); }
           }
           @media (max-width: 768px) {
-            .logo-ticker { animation-duration: 25s !important; }
+            .logo-ticker { animation-duration: 30s !important; }
           }
         `}</style>
       </section>
