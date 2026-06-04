@@ -394,7 +394,7 @@ export default function ResultsPage() {
             </p>
             <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginBottom: '1.75rem' }} />
 
-            <div style={{ position: 'relative', width: '100%', height: '360px', marginBottom: '2rem' }}>
+            <div style={{ position: 'relative', width: '100%', aspectRatio: '3 / 4', marginBottom: '2rem' }}>
               <Image
                 src="/results/emmanuel.jpg"
                 alt="S. Meribole"
