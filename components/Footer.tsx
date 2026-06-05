@@ -41,7 +41,7 @@ export default function Footer() {
           {/* Services */}
           <div>
             <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.7rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem', fontWeight: 500 }}>Services</p>
-            {['Admissions Strategy', 'Research Identity', 'Narrative Architecture', 'Scholarship Positioning', 'Interview Preparation'].map(item => (
+            {['Admissions Strategy', 'Research Identity', 'Narrative Architecture', 'Interview Preparation'].map(item => (
               <p key={item} style={{ display: 'block', marginBottom: '0.75rem', color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 300 }}>
                 {item}
               </p>

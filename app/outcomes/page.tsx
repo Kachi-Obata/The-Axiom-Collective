@@ -285,9 +285,9 @@ export default function ResultsPage() {
             <h2 className="font-display" style={{ fontSize: '2.2rem', fontWeight: 300, color: 'var(--off-white)', marginBottom: '0.5rem', lineHeight: 1.1 }}>
               E. Gayus
             </h2>
-            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', fontWeight: 300, color: 'var(--muted)', marginBottom: '1.25rem' }}>
+            {/* <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', fontWeight: 300, color: 'var(--muted)', marginBottom: '1.25rem' }}>
               MPH · Harvard T.H. Chan School of Public Health, Class of 2026
-            </p>
+            </p> */}
             <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginBottom: '1.75rem' }} />
 
             <div style={{ position: 'relative', width: '100%', aspectRatio: '3 / 4', marginBottom: '2rem' }}>
@@ -310,7 +310,7 @@ export default function ResultsPage() {
 
           {/* Right — testimonial */}
           <AnimateOnScroll delay={200}>
-            <p style={EYEBROW}>In Their Words</p>
+            <p style={EYEBROW}>In His Words</p>
             <blockquote style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '0.9rem',
@@ -329,69 +329,24 @@ export default function ResultsPage() {
         </div>
       </section>
 
-      {/* SCHOLAR 02 — H. SHOBULE */}
+      {/* SCHOLAR 02 — S. MERIBOLE */}
       <section className="section-padded" style={{
         paddingLeft: '2.5rem',
         paddingRight: '2.5rem',
         background: 'var(--bg-secondary)',
         borderBottom: '1px solid var(--border)',
       }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '6rem', alignItems: 'start' }}
-          className="results-scholar-mirror">
-
-          {/* Left — testimonial */}
-          <AnimateOnScroll>
-            <p style={EYEBROW}>In Their Words</p>
-            <blockquote style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontSize: '0.9rem',
-              fontWeight: 300,
-              lineHeight: '1.85',
-              color: 'var(--muted)',
-              marginBottom: '2rem',
-            }}>
-              "Before working with Marius, I knew where I wanted to go, but I was not entirely sure how to present my experiences and ambitions in a way that reflected who I was. His approach was thoughtful and highly personalised. He encouraged me to think beyond the application itself and focus on the broader trajectory I wanted to build for my academic and professional future. Through that process, I developed a much clearer sense of purpose and confidence. What I valued most was his genuine investment in my success and his willingness to challenge me to think more critically about my goals. Receiving offers from both LSE and LSHTM was a proud milestone, and I credit much of my growth during that period to the mentorship and strategic guidance I received."
-            </blockquote>
-            <p className="font-display" style={{ fontSize: '0.95rem', fontStyle: 'italic', color: 'var(--off-white)' }}>
-              — H. Shobule, Harvard MPH
-            </p>
-          </AnimateOnScroll>
-
-          {/* Right — identity + admissions */}
-          <AnimateOnScroll delay={200}>
-            <p style={EYEBROW}>Scholar 02</p>
-            <h2 className="font-display" style={{ fontSize: '2.2rem', fontWeight: 300, color: 'var(--off-white)', marginBottom: '0.5rem', lineHeight: 1.1 }}>
-              H. Shobule
-            </h2>
-            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', fontWeight: 300, color: 'var(--muted)', marginBottom: '1.25rem' }}>
-              MPH · Harvard T.H. Chan School of Public Health
-            </p>
-            <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginBottom: '1.75rem' }} />
-
-            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.68rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1rem' }}>
-              Admitted To
-            </p>
-            {halimaAdmissions.map(a => (
-              <AdmissionRow key={a.university} admission={a} onLetterClick={openLetter} />
-            ))}
-          </AnimateOnScroll>
-
-        </div>
-      </section>
-
-      {/* SCHOLAR 03 — S. MERIBOLE */}
-      <section className="section-padded" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', borderBottom: '1px solid var(--border)' }}>
         <div className="grid-asymm" style={{ maxWidth: '1200px', margin: '0 auto', gap: '6rem', alignItems: 'start' }}>
 
           {/* Left — identity + photo + admissions */}
           <AnimateOnScroll>
-            <p style={EYEBROW}>Scholar 03</p>
+            <p style={EYEBROW}>Scholar 02</p>
             <h2 className="font-display" style={{ fontSize: '2.2rem', fontWeight: 300, color: 'var(--off-white)', marginBottom: '0.5rem', lineHeight: 1.1 }}>
               S. Meribole
             </h2>
-            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', fontWeight: 300, color: 'var(--muted)', marginBottom: '1.25rem' }}>
-              MSc Digital Health and Entrepreneurship · UCL
-            </p>
+            {/* <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', fontWeight: 300, color: 'var(--muted)', marginBottom: '1.25rem' }}>
+              Admitted · MSc Digital Health and Entrepreneurship · UCL
+            </p> */}
             <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginBottom: '1.75rem' }} />
 
             <div style={{ position: 'relative', width: '100%', aspectRatio: '3 / 4', marginBottom: '2rem' }}>
@@ -414,7 +369,7 @@ export default function ResultsPage() {
 
           {/* Right — testimonial */}
           <AnimateOnScroll delay={200}>
-            <p style={EYEBROW}>In Their Words</p>
+            <p style={EYEBROW}>In His Words</p>
             <blockquote style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '0.9rem',
@@ -428,6 +383,51 @@ export default function ResultsPage() {
             <p className="font-display" style={{ fontSize: '0.95rem', fontStyle: 'italic', color: 'var(--off-white)' }}>
               — S. Meribole, UCL MSc
             </p>
+          </AnimateOnScroll>
+
+        </div>
+      </section>
+
+      {/* SCHOLAR 03 — H. SHOBULE */}
+      <section className="section-padded" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', borderBottom: '1px solid var(--border)' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '6rem', alignItems: 'start' }}
+          className="results-scholar-mirror">
+
+          {/* Left — testimonial */}
+          <AnimateOnScroll>
+            <p style={EYEBROW}>In Her Words</p>
+            <blockquote style={{
+              fontFamily: 'DM Sans, sans-serif',
+              fontSize: '0.9rem',
+              fontWeight: 300,
+              lineHeight: '1.85',
+              color: 'var(--muted)',
+              marginBottom: '2rem',
+            }}>
+              "Before working with Marius, I knew where I wanted to go, but I was not entirely sure how to present my experiences and ambitions in a way that reflected who I was. His approach was thoughtful and highly personalised. He encouraged me to think beyond the application itself and focus on the broader trajectory I wanted to build for my academic and professional future. Through that process, I developed a much clearer sense of purpose and confidence. What I valued most was his genuine investment in my success and his willingness to challenge me to think more critically about my goals. Receiving offers from both LSE and LSHTM was a proud milestone, and I credit much of my growth during that period to the mentorship and strategic guidance I received."
+            </blockquote>
+            <p className="font-display" style={{ fontSize: '0.95rem', fontStyle: 'italic', color: 'var(--off-white)' }}>
+              — H. Shobule, LSE
+            </p>
+          </AnimateOnScroll>
+
+          {/* Right — identity + admissions */}
+          <AnimateOnScroll delay={200}>
+            <p style={EYEBROW}>Scholar 03</p>
+            <h2 className="font-display" style={{ fontSize: '2.2rem', fontWeight: 300, color: 'var(--off-white)', marginBottom: '0.5rem', lineHeight: 1.1 }}>
+              H. Shobule
+            </h2>
+            {/* <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', fontWeight: 300, color: 'var(--muted)', marginBottom: '1.25rem' }}>
+              Admitted · MPH · LSE / LSHTM
+            </p> */}
+            <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginBottom: '1.75rem' }} />
+
+            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.68rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1rem' }}>
+              Admitted To
+            </p>
+            {halimaAdmissions.map(a => (
+              <AdmissionRow key={a.university} admission={a} onLetterClick={openLetter} />
+            ))}
           </AnimateOnScroll>
 
         </div>
