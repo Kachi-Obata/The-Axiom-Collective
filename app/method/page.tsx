@@ -274,7 +274,7 @@ export default function MethodPage() {
           <AnimateOnScroll>
             <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.68rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500, marginBottom: '2rem' }}>Our Commitment</p>
           </AnimateOnScroll>
-          <div className="grid-2col" style={{ gap: '8rem', alignItems: 'start' }}>
+          <div className="grid-2col method-commitment-grid" style={{ gap: '8rem', alignItems: 'start' }}>
             <AnimateOnScroll>
               <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 3vw, 3rem)', fontWeight: 300, lineHeight: 1.15, color: 'var(--off-white)' }}>
                 Authenticity<br />

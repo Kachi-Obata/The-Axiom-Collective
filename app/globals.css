@@ -273,6 +273,11 @@ body::before {
     gap: 2.5rem !important;
   }
 
+  /* Reduce gap between Authenticity heading and body text on mobile */
+  .method-commitment-grid {
+    gap: 2.5rem !important;
+  }
+
   /* Reduce top padding before Phase I on mobile */
   .method-phases {
     padding-top: 3rem !important;
