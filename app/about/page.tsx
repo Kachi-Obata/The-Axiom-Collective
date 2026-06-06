@@ -351,8 +351,8 @@ export default function AboutPage() {
             <AnimateOnScroll delay={200}>
               <p style={{
                 fontFamily: 'DM Sans, sans-serif',
-                fontSize: '0.7rem',
-                letterSpacing: '0.14em',
+                fontSize: '0.68rem',
+                letterSpacing: '0.2em',
                 textTransform: 'uppercase',
                 color: 'var(--crimson)',
                 fontWeight: 500,
@@ -374,16 +374,16 @@ export default function AboutPage() {
               </p>
               <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginBottom: '2rem' }} />
 
-              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.9rem', fontWeight: 300, lineHeight: '1.85', color: 'var(--muted)', marginBottom: '1.25rem' }}>
+              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '1.05rem', fontWeight: 300, lineHeight: '1.85', color: 'var(--muted)', marginBottom: '1.5rem' }}>
                 Joffrey Doma is a researcher, educator, and higher education strategist whose academic and professional journey spans some of the United Kingdom's leading institutions. He holds an MA in International Relations from the University of Sheffield and an MSc in Global Governance and Diplomacy from the University of Oxford. He is currently pursuing a PhD at University College London (UCL), where his research engages critical questions of global governance, knowledge production, and environmental politics.
               </p>
-              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.9rem', fontWeight: 300, lineHeight: '1.85', color: 'var(--muted)', marginBottom: '1.25rem' }}>
+              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '1.05rem', fontWeight: 300, lineHeight: '1.85', color: 'var(--muted)', marginBottom: '1.5rem' }}>
                 Having successfully navigated the complexities of international education, UK immigration systems, competitive scholarship applications, and academic career development, Joffrey brings a wealth of practical experience to students seeking to pursue educational opportunities abroad. Over the years, he has secured scholarships, research opportunities, and teaching appointments, developing a deep understanding of the academic pathways available to ambitious students at every stage of their journey.
               </p>
-              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.9rem', fontWeight: 300, lineHeight: '1.85', color: 'var(--muted)', marginBottom: '1.25rem' }}>
+              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '1.05rem', fontWeight: 300, lineHeight: '1.85', color: 'var(--muted)', marginBottom: '1.5rem' }}>
                 His research interests lie at the intersection of African knowledge systems, global governance, and environmental politics. In particular, he is interested in how African intellectual traditions and epistemologies can contribute to contemporary debates on governance, sustainability, and international cooperation. His work also explores environmental governance in Africa, with a focus on the political, social, and institutional challenges shaping responses to climate and ecological change across the continent.
               </p>
-              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.9rem', fontWeight: 300, lineHeight: '1.85', color: 'var(--muted)' }}>
+              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '1.05rem', fontWeight: 300, lineHeight: '1.85', color: 'var(--muted)' }}>
                 At The Axiom Collective, Joffrey combines academic insight with practical mentorship, helping students identify opportunities, clarify their aspirations, and navigate the often-complex process of pursuing higher education at leading institutions around the world. His approach is grounded in the belief that successful applications emerge not from formulaic strategies, but from a clear understanding of purpose, potential, and long-term educational goals.
               </p>
             </AnimateOnScroll>
