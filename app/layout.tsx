@@ -49,6 +49,44 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'ProfessionalService',
+      '@id': 'https://theaxiomcollective.org/#organization',
+      name: 'The Axiom Collective',
+      url: 'https://theaxiomcollective.org',
+      email: 'ask@theaxiomcollective.org',
+      description: "Africa's leading academic positioning and postgraduate admissions strategy firm dedicated to cultivating globally competitive scholars, researchers, and future leaders.",
+      slogan: 'Strategy. Positioning. Possibility.',
+      areaServed: 'Worldwide',
+      knowsAbout: [
+        'Postgraduate Admissions Strategy',
+        'Research Identity Development',
+        'Narrative Architecture',
+        'Academic Positioning',
+        'Fellowship Applications',
+        'PhD Admissions',
+      ],
+      founder: {
+        '@type': 'Person',
+        name: 'Dr. Marius Isikalu',
+        jobTitle: 'Founder',
+        description: 'Researcher, policy strategist, and founder of The Axiom Collective.',
+        knowsAbout: ['Academic Positioning', 'Postgraduate Admissions', 'Education Policy'],
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://theaxiomcollective.org/#website',
+      url: 'https://theaxiomcollective.org',
+      name: 'The Axiom Collective',
+      publisher: { '@id': 'https://theaxiomcollective.org/#organization' },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -59,6 +97,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Navbar />
         <main><PageTransition>{children}</PageTransition></main>
         <Footer />
