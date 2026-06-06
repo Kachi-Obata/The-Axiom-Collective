@@ -345,7 +345,6 @@ export default function AboutPage() {
                   sizes="(max-width: 768px) 100vw, 40vw"
                 />
               </div>
-              <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginTop: '1.75rem' }} />
             </AnimateOnScroll>
 
             {/* Bio */}
