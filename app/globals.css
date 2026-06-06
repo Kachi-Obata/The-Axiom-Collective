@@ -222,6 +222,78 @@ body::before {
     padding-bottom: 3rem;
   }
 
+  /* Tighten gap between philosophy text and items on mobile */
+  .philosophy-grid {
+    gap: 2.5rem !important;
+  }
+
+  /* Tighten gap between Who We Are text and Vision/Mission on mobile */
+  .about-identity-grid {
+    gap: 2.5rem !important;
+  }
+
+  /* Tighten gap between Crafting heading and blockquote on mobile */
+  .about-method-grid {
+    gap: 2.5rem !important;
+  }
+
+  /* Reduce bottom margin on the crimson rule under Institutional Values on mobile */
+  .values-rule {
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Reduce gap between value title and description on mobile */
+  .values-row {
+    gap: 0.5rem !important;
+  }
+
+  /* Reduce gap between Beyond Admissions text and vision list on mobile */
+  .about-vision-grid {
+    gap: 2.5rem !important;
+  }
+
+  /* Reduce gap between services intro paragraphs on mobile */
+  .services-intro {
+    gap: 3.5rem !important;
+  }
+
+  /* Reduce top and bottom padding on each service block on mobile */
+  .service-block {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Reduce gap before What's Included on mobile */
+  .service-grid {
+    gap: 3rem !important;
+  }
+
+  /* Reduce gap between method intro quote and paragraphs on mobile */
+  .method-intro-grid {
+    gap: 2.5rem !important;
+  }
+
+  /* Reduce top padding before Phase I on mobile */
+  .method-phases {
+    padding-top: 3rem !important;
+  }
+
+  /* Reduce gap between scholar admissions and testimonial on mobile */
+  .scholar-grid {
+    gap: 3rem !important;
+  }
+
+  /* Reduce top and bottom padding on What We Do section on mobile */
+  .services-preview {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Reduce gap between "What We Do" heading and first service item on mobile */
+  .services-header {
+    margin-bottom: 1rem !important;
+  }
+
   /* Shrink hero bottom padding on mobile */
   .hero-inner {
     padding-bottom: 4rem !important;

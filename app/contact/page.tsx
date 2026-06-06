@@ -158,10 +158,10 @@ export default function ContactPage() {
                   { step: '04', title: 'Engagement', desc: 'We begin positioning you for your target institutions.' },
                 ].map(item => (
                   <div key={item.step} style={{ display: 'flex', gap: '1.25rem', padding: '1.5rem 0', borderBottom: '1px solid var(--border)' }}>
-                    <span style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '0.85rem', color: 'var(--crimson)', letterSpacing: '0.06em', flexShrink: 0, paddingTop: '2px' }}>{item.step}</span>
+                    <span style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.6rem', fontWeight: 300, color: 'var(--crimson)', letterSpacing: '0.06em', flexShrink: 0, lineHeight: 1 }}>{item.step}</span>
                     <div>
-                      <p style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.1rem', color: 'var(--off-white)', marginBottom: '0.25rem' }}>{item.title}</p>
-                      <p style={{ color: 'var(--muted)', fontSize: '0.82rem', fontWeight: 300, lineHeight: 1.6 }}>{item.desc}</p>
+                      <p style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.3rem', color: 'var(--off-white)', marginBottom: '0.25rem' }}>{item.title}</p>
+                      <p style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 300, lineHeight: 1.6 }}>{item.desc}</p>
                     </div>
                   </div>
                 ))}

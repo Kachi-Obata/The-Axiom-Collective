@@ -64,7 +64,7 @@ export default function AboutPage() {
 
       {/* IDENTITY */}
       <section className="section-padded" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', maxWidth: '1200px', margin: '0 auto' }}>
-        <div className="grid-2col" style={{ gap: '8rem', alignItems: 'start' }}>
+        <div className="grid-2col about-identity-grid" style={{ gap: '8rem', alignItems: 'start' }}>
           <AnimateOnScroll>
             <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 3vw, 2.8rem)', fontWeight: 300, lineHeight: 1.2, color: 'var(--off-white)', marginBottom: '2rem' }}>
               Who We Are
@@ -141,7 +141,7 @@ export default function AboutPage() {
         borderTop: '1px solid var(--border)',
         borderBottom: '1px solid var(--border)',
       }}>
-        <div className="grid-2col" style={{ maxWidth: '1200px', margin: '0 auto', gap: '8rem', alignItems: 'center' }}>
+        <div className="grid-2col about-method-grid" style={{ maxWidth: '1200px', margin: '0 auto', gap: '8rem', alignItems: 'center' }}>
           <AnimateOnScroll>
             <p style={{
               fontFamily: 'DM Sans, sans-serif',
@@ -189,12 +189,13 @@ export default function AboutPage() {
       {/* VALUES */}
       <section className="section-padded" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', maxWidth: '1200px', margin: '0 auto' }}>
         <AnimateOnScroll>
-          <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', fontWeight: 300, color: 'var(--off-white)', marginBottom: '5rem' }}>Institutional Values</h2>
+          <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', fontWeight: 300, color: 'var(--off-white)', marginBottom: '1.25rem' }}>Institutional Values</h2>
+          <span className="values-rule" style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginBottom: '3rem' }} />
         </AnimateOnScroll>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           {values.map((v, i) => (
             <AnimateOnScroll key={v.title} delay={i * 80}>
-              <div className="grid-values" style={{
+              <div className="grid-values values-row" style={{
                 gap: '3rem',
                 padding: '2.5rem 0',
                 borderBottom: '1px solid var(--border)',
@@ -290,6 +291,9 @@ export default function AboutPage() {
             </div>
 
             {/* Admission */}
+            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginTop: '1.5rem', marginBottom: '0' }}>
+              Dr. Isikalu also received an offer of admission from Harvard University's Graduate School of Education — the same institution whose admissions standards inform the strategic work he brings to every scholar at The Axiom Collective.
+            </p>
             <div style={{ borderTop: '1px solid var(--border)', marginTop: '2rem', paddingTop: '1.5rem' }}>
               <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.68rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '0.75rem' }}>
                 Admission
@@ -324,7 +328,7 @@ export default function AboutPage() {
 
       {/* LONG-TERM VISION */}
       <section className="section-padded" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', background: 'var(--bg-secondary)', borderTop: '1px solid var(--border)' }}>
-        <div className="grid-2col" style={{ maxWidth: '1200px', margin: '0 auto', gap: '6rem', alignItems: 'center' }}>
+        <div className="grid-2col about-vision-grid" style={{ maxWidth: '1200px', margin: '0 auto', gap: '6rem', alignItems: 'center' }}>
           <AnimateOnScroll>
             <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 3vw, 3rem)', fontWeight: 300, lineHeight: 1.15, color: 'var(--off-white)', marginBottom: '1.5rem' }}>
               Beyond Admissions.<br />

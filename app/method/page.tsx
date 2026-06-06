@@ -50,7 +50,7 @@ export default function MethodPage() {
 
       {/* INTRO */}
       <section className="section-padded" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem' }}>
-        <div className="grid-2col" style={{ maxWidth: '1200px', margin: '0 auto', gap: '8rem', alignItems: 'start' }}>
+        <div className="grid-2col method-intro-grid" style={{ maxWidth: '1200px', margin: '0 auto', gap: '8rem', alignItems: 'start' }}>
           <AnimateOnScroll>
             <p className="font-display" style={{
               fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
@@ -77,14 +77,14 @@ export default function MethodPage() {
       </section>
 
       {/* PHASES */}
-      <section style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '6rem 2.5rem' }}>
+      <section className="method-phases" style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '6rem 2.5rem' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
           {/* Phase I */}
           <AnimateOnScroll>
             <div className="grid-method-phase" style={{ paddingBottom: '4rem', marginBottom: '4rem', borderBottom: '1px solid var(--border)' }}>
               <div>
-                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.68rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500, marginBottom: '0.75rem' }}>Phase I</p>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500, marginBottom: '0.75rem' }}>Phase I</p>
                 <h2 className="font-display" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 2.4rem)', fontWeight: 300, color: 'var(--off-white)', lineHeight: 1.1 }}>Discovery</h2>
               </div>
               <div>
@@ -121,7 +121,7 @@ export default function MethodPage() {
           <AnimateOnScroll>
             <div className="grid-method-phase" style={{ paddingBottom: '4rem', marginBottom: '4rem', borderBottom: '1px solid var(--border)' }}>
               <div>
-                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.68rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500, marginBottom: '0.75rem' }}>Phase II</p>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500, marginBottom: '0.75rem' }}>Phase II</p>
                 <h2 className="font-display" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 2.4rem)', fontWeight: 300, color: 'var(--off-white)', lineHeight: 1.1 }}>Strategic<br />Positioning</h2>
               </div>
               <div>
@@ -150,7 +150,7 @@ export default function MethodPage() {
           <AnimateOnScroll>
             <div className="grid-method-phase" style={{ paddingBottom: '4rem', marginBottom: '4rem', borderBottom: '1px solid var(--border)' }}>
               <div>
-                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.68rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500, marginBottom: '0.75rem' }}>Phase III</p>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500, marginBottom: '0.75rem' }}>Phase III</p>
                 <h2 className="font-display" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 2.4rem)', fontWeight: 300, color: 'var(--off-white)', lineHeight: 1.1 }}>Portfolio<br />Development</h2>
               </div>
               <div>
@@ -171,7 +171,7 @@ export default function MethodPage() {
           <AnimateOnScroll>
             <div className="grid-method-phase" style={{ paddingBottom: '4rem', marginBottom: '4rem', borderBottom: '1px solid var(--border)' }}>
               <div>
-                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.68rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500, marginBottom: '0.75rem' }}>Phase IV</p>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500, marginBottom: '0.75rem' }}>Phase IV</p>
                 <h2 className="font-display" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 2.4rem)', fontWeight: 300, color: 'var(--off-white)', lineHeight: 1.1 }}>Narrative<br />Development</h2>
               </div>
               <div>
@@ -212,7 +212,7 @@ export default function MethodPage() {
           <AnimateOnScroll>
             <div className="grid-method-phase" style={{ paddingBottom: '4rem', marginBottom: '4rem', borderBottom: '1px solid var(--border)' }}>
               <div>
-                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.68rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500, marginBottom: '0.75rem' }}>Phase V</p>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500, marginBottom: '0.75rem' }}>Phase V</p>
                 <h2 className="font-display" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 2.4rem)', fontWeight: 300, color: 'var(--off-white)', lineHeight: 1.1 }}>Application<br />Execution</h2>
               </div>
               <div>
@@ -248,7 +248,7 @@ export default function MethodPage() {
           <AnimateOnScroll>
             <div className="grid-method-phase">
               <div>
-                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.68rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500, marginBottom: '0.75rem' }}>Phase VI</p>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500, marginBottom: '0.75rem' }}>Phase VI</p>
                 <h2 className="font-display" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 2.4rem)', fontWeight: 300, color: 'var(--off-white)', lineHeight: 1.1 }}>Transition<br />& Beyond</h2>
               </div>
               <div>

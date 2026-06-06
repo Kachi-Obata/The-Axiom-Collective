@@ -182,7 +182,7 @@ export default function Home() {
 
       {/* PHILOSOPHY */}
       <section className="section-padded" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', maxWidth: '1200px', margin: '0 auto', paddingTop: '4rem' }}>
-        <div className="grid-2col" style={{ gap: '6rem', alignItems: 'start' }}>
+        <div className="grid-2col philosophy-grid" style={{ gap: '6rem', alignItems: 'start' }}>
           <div>
             <AnimateOnScroll>
               <h2 className="font-display" style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)', fontWeight: 300, lineHeight: 1.1, color: 'var(--off-white)', marginBottom: '2rem' }}>
@@ -226,10 +226,10 @@ export default function Home() {
       </section>
 
       {/* SERVICES PREVIEW */}
-      <section style={{ padding: '6rem 2.5rem 8rem', background: 'var(--bg-secondary)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
+      <section className="services-preview" style={{ padding: '6rem 2.5rem 8rem', background: 'var(--bg-secondary)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <AnimateOnScroll>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '5rem', flexWrap: 'wrap', gap: '2rem' }}>
+            <div className="services-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '5rem', flexWrap: 'wrap', gap: '2rem' }}>
               <div>
                 <h2 className="font-display" style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', fontWeight: 300, lineHeight: 1.1, color: 'var(--off-white)' }}>
                   What We Do

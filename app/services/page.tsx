@@ -112,7 +112,7 @@ export default function ServicesPage() {
       </section>
 
       {/* INTRO */}
-      <section className="grid-2col section-padded-sm" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', maxWidth: '1200px', margin: '0 auto', gap: '6rem', alignItems: 'center' }}>
+      <section className="grid-2col section-padded-sm services-intro" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', maxWidth: '1200px', margin: '0 auto', gap: '6rem', alignItems: 'center' }}>
         <AnimateOnScroll>
           <p className="font-display" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', fontWeight: 300, fontStyle: 'italic', lineHeight: 1.4, color: 'var(--off-white)' }}>
             "We approach admissions not as paperwork, but as narrative construction, institutional alignment, and strategic identity formation."
@@ -129,16 +129,16 @@ export default function ServicesPage() {
       <section style={{ borderTop: '1px solid var(--border)' }}>
         {services.map((s, i) => (
           <AnimateOnScroll key={s.number}>
-            <div style={{
+            <div className="service-block" style={{
               padding: '6rem 2.5rem',
               borderBottom: '1px solid var(--border)',
               background: i % 2 === 1 ? 'var(--bg-secondary)' : 'var(--bg)',
             }}>
-              <div className="grid-asymm" style={{ maxWidth: '1200px', margin: '0 auto', gap: '6rem', alignItems: 'start' }}>
+              <div className="grid-asymm service-grid" style={{ maxWidth: '1200px', margin: '0 auto', gap: '6rem', alignItems: 'start' }}>
                 {/* Left */}
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
-                    <span style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '0.9rem', color: 'var(--crimson)', letterSpacing: '0.08em' }}>{s.number}</span>
+                    <span style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.6rem', fontWeight: 300, color: 'var(--crimson)', letterSpacing: '0.08em' }}>{s.number}</span>
                     <span style={{ display: 'block', flex: 1, height: '1px', background: 'var(--border)' }} />
                   </div>
                   <h2 className="font-display" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 2.5rem)', fontWeight: 300, lineHeight: 1.15, color: 'var(--off-white)', marginBottom: '1rem' }}>
@@ -154,14 +154,14 @@ export default function ServicesPage() {
 
                 {/* Right */}
                 <div>
-                  <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.7rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem', fontWeight: 500 }}>
+                  <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.82rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem', fontWeight: 500 }}>
                     What's Included
                   </p>
                   <div style={{ marginBottom: '3rem' }}>
                     {s.details.map((d, j) => (
                       <div key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', padding: '0.85rem 0', borderBottom: '1px solid var(--border)' }}>
                         <span style={{ display: 'block', width: '6px', height: '6px', background: 'var(--crimson)', borderRadius: '50%', marginTop: '6px', flexShrink: 0 }} />
-                        <p style={{ color: 'var(--off-white)', fontSize: '0.88rem', fontWeight: 300, lineHeight: '1.6' }}>{d}</p>
+                        <p style={{ color: 'var(--off-white)', fontSize: '1rem', fontWeight: 300, lineHeight: '1.6' }}>{d}</p>
                       </div>
                     ))}
                   </div>

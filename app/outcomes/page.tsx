@@ -277,7 +277,7 @@ export default function ResultsPage() {
 
       {/* SCHOLAR 01 — E. GAYUS */}
       <section className="section-padded" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', borderBottom: '1px solid var(--border)' }}>
-        <div className="grid-asymm" style={{ maxWidth: '1200px', margin: '0 auto', gap: '6rem', alignItems: 'start' }}>
+        <div className="grid-asymm scholar-grid" style={{ maxWidth: '1200px', margin: '0 auto', gap: '6rem', alignItems: 'start' }}>
 
           {/* Left — identity + photo + admissions */}
           <AnimateOnScroll>
@@ -336,7 +336,7 @@ export default function ResultsPage() {
         background: 'var(--bg-secondary)',
         borderBottom: '1px solid var(--border)',
       }}>
-        <div className="grid-asymm" style={{ maxWidth: '1200px', margin: '0 auto', gap: '6rem', alignItems: 'start' }}>
+        <div className="grid-asymm scholar-grid" style={{ maxWidth: '1200px', margin: '0 auto', gap: '6rem', alignItems: 'start' }}>
 
           {/* Left — identity + photo + admissions */}
           <AnimateOnScroll>
@@ -390,29 +390,10 @@ export default function ResultsPage() {
 
       {/* SCHOLAR 03 — H. SHOBULE */}
       <section className="section-padded" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', borderBottom: '1px solid var(--border)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '6rem', alignItems: 'start' }}
-          className="results-scholar-mirror">
+        <div className="grid-asymm scholar-grid" style={{ maxWidth: '1200px', margin: '0 auto', gap: '6rem', alignItems: 'start' }}>
 
-          {/* Left — testimonial */}
+          {/* Left — identity + admissions */}
           <AnimateOnScroll>
-            <p style={EYEBROW}>In Her Words</p>
-            <blockquote style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontSize: '0.9rem',
-              fontWeight: 300,
-              lineHeight: '1.85',
-              color: 'var(--muted)',
-              marginBottom: '2rem',
-            }}>
-              "Before working with Marius, I knew where I wanted to go, but I was not entirely sure how to present my experiences and ambitions in a way that reflected who I was. His approach was thoughtful and highly personalised. He encouraged me to think beyond the application itself and focus on the broader trajectory I wanted to build for my academic and professional future. Through that process, I developed a much clearer sense of purpose and confidence. What I valued most was his genuine investment in my success and his willingness to challenge me to think more critically about my goals. Receiving offers from both LSE and LSHTM was a proud milestone, and I credit much of my growth during that period to the mentorship and strategic guidance I received."
-            </blockquote>
-            <p className="font-display" style={{ fontSize: '0.95rem', fontStyle: 'italic', color: 'var(--off-white)' }}>
-              — H. Shobule, LSE
-            </p>
-          </AnimateOnScroll>
-
-          {/* Right — identity + admissions */}
-          <AnimateOnScroll delay={200}>
             <p style={EYEBROW}>Scholar 03</p>
             <h2 className="font-display" style={{ fontSize: '2.2rem', fontWeight: 300, color: 'var(--off-white)', marginBottom: '0.5rem', lineHeight: 1.1 }}>
               H. Shobule
@@ -428,6 +409,24 @@ export default function ResultsPage() {
             {halimaAdmissions.map(a => (
               <AdmissionRow key={a.university} admission={a} onLetterClick={openLetter} />
             ))}
+          </AnimateOnScroll>
+
+          {/* Right — testimonial */}
+          <AnimateOnScroll delay={200}>
+            <p style={EYEBROW}>In Her Words</p>
+            <blockquote style={{
+              fontFamily: 'DM Sans, sans-serif',
+              fontSize: '0.9rem',
+              fontWeight: 300,
+              lineHeight: '1.85',
+              color: 'var(--muted)',
+              marginBottom: '2rem',
+            }}>
+              "Before working with Marius, I knew where I wanted to go, but I was not entirely sure how to present my experiences and ambitions in a way that reflected who I was. His approach was thoughtful and highly personalised. He encouraged me to think beyond the application itself and focus on the broader trajectory I wanted to build for my academic and professional future. Through that process, I developed a much clearer sense of purpose and confidence. What I valued most was his genuine investment in my success and his willingness to challenge me to think more critically about my goals. Receiving offers from both LSE and LSHTM was a proud milestone, and I credit much of my growth during that period to the mentorship and strategic guidance I received."
+            </blockquote>
+            <p className="font-display" style={{ fontSize: '0.95rem', fontStyle: 'italic', color: 'var(--off-white)' }}>
+              — H. Shobule, LSE
+            </p>
           </AnimateOnScroll>
 
         </div>
