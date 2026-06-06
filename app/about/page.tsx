@@ -209,7 +209,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* FOUNDER BIO */}
+      {/* LEADERSHIP */}
       <section className="section-padded" style={{
         paddingLeft: '2.5rem',
         paddingRight: '2.5rem',
@@ -217,111 +217,178 @@ export default function AboutPage() {
         borderTop: '1px solid var(--border)',
         borderBottom: '1px solid var(--border)',
       }}>
-        <div className="grid-asymm" style={{ maxWidth: '1200px', margin: '0 auto', gap: '6rem', alignItems: 'start' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
-          {/* Photo */}
           <AnimateOnScroll>
-            <div style={{ position: 'relative', width: '100%', aspectRatio: '3 / 4' }}>
-              <Image
-                src="/people/marius.png"
-                alt="Dr. Marius Isikalu"
-                fill
-                priority
-                style={{ objectFit: 'cover', objectPosition: 'center top' }}
-                sizes="(max-width: 768px) 100vw, 40vw"
-              />
-            </div>
+            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.68rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--crimson)', fontWeight: 500, marginBottom: '4rem' }}>
+              Leadership
+            </p>
           </AnimateOnScroll>
 
-          {/* Bio */}
-          <AnimateOnScroll delay={200}>
-            <h2 className="font-display" style={{
-              fontSize: 'clamp(2.2rem, 3vw, 3.2rem)',
-              fontWeight: 300,
-              color: 'var(--off-white)',
-              marginBottom: '0.5rem',
-              lineHeight: 1.1,
-            }}>
-              Dr. Marius Isikalu
-            </h2>
-            <p style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontSize: '0.68rem',
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              color: 'var(--crimson)',
-              fontWeight: 500,
-              marginBottom: '3rem',
-            }}>
-              Founder
-            </p>
+          {/* Row 1 — Dr. Marius Isikalu */}
+          <div className="grid-asymm" style={{ gap: '6rem', alignItems: 'start', paddingBottom: '5rem', marginBottom: '5rem', borderBottom: '1px solid var(--border)' }}>
 
-            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
-              Dr. Marius Isikalu is a researcher, policy strategist, and founder of The Axiom Collective, a premium postgraduate admissions and academic positioning consultancy dedicated to helping globally ambitious applicants gain admission into the world's leading universities, fellowship programmes, and leadership development opportunities.
-            </p>
-            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
-              His work is founded on a simple principle: exceptional applications emerge from exceptional applicants. Rather than focusing solely on admissions documents, he works closely with candidates to develop intellectual identity, narrative coherence, strategic positioning, and long-term academic distinction. Through this approach, he helps applicants present not only achievement, but also the clarity and purpose sought by the world's most selective institutions.
-            </p>
-            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
-              Dr. Isikalu serves as Head of Strategy and Methodology to the Senior Special Assistant to the President of Nigeria on Technical, Vocational and Entrepreneurship Education, where he contributes to the design of strategic initiatives aimed at advancing educational development, talent cultivation, and human capital formation. His experience at the intersection of policy, education, and leadership informs his distinctive approach to applicant development and academic mentorship.
-            </p>
-            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
-              Through The Axiom Collective, he has successfully guided candidates to institutions including Harvard University, Stanford University, Yale University, Columbia University, Johns Hopkins University, the London School of Economics, Brown University, and University College London, among others. His work focuses on helping applicants navigate highly competitive admissions environments through deliberate profile development, compelling personal narratives, and strategic institutional alignment.
-            </p>
-            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '3rem' }}>
-              Dr. Isikalu holds a PhD in Political Science and maintains active interests in global affairs, political theory, research methodology, educational development, and leadership formation. He is particularly committed to cultivating a new generation of globally competitive African scholars, professionals, and policy leaders capable of contributing meaningfully to international academic, policy, and leadership spaces.
-            </p>
+            {/* Photo */}
+            <AnimateOnScroll>
+              <div style={{ position: 'relative', width: '100%', aspectRatio: '3 / 4' }}>
+                <Image
+                  src="/people/marius.png"
+                  alt="Dr. Marius Isikalu"
+                  fill
+                  priority
+                  style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                />
+              </div>
+            </AnimateOnScroll>
 
-            {/* Pull quote */}
-            <div style={{
-              borderLeft: '2px solid var(--crimson)',
-              paddingLeft: '2rem',
-              marginTop: '1rem',
-            }}>
-              <blockquote className="font-display" style={{
-                fontSize: 'clamp(1.2rem, 2vw, 1.55rem)',
+            {/* Bio */}
+            <AnimateOnScroll delay={200}>
+              <h2 className="font-display" style={{
+                fontSize: 'clamp(2.2rem, 3vw, 3.2rem)',
                 fontWeight: 300,
-                fontStyle: 'italic',
-                lineHeight: 1.45,
                 color: 'var(--off-white)',
-                letterSpacing: '0.01em',
+                marginBottom: '0.5rem',
+                lineHeight: 1.1,
               }}>
-                "Exceptional applicants are not manufactured through templates; they are cultivated through strategy and intellectual authenticity."
-              </blockquote>
-            </div>
+                Dr. Marius Isikalu
+              </h2>
+              <p style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: '0.68rem',
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: 'var(--crimson)',
+                fontWeight: 500,
+                marginBottom: '3rem',
+              }}>
+                Founder & Director
+              </p>
 
-            {/* Admission */}
-            <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginTop: '1.5rem', marginBottom: '0' }}>
-              Dr. Isikalu also received an offer of admission from Harvard University's Graduate School of Education — the same institution whose admissions standards inform the strategic work he brings to every scholar at The Axiom Collective.
-            </p>
-            <div style={{ borderTop: '1px solid var(--border)', marginTop: '2rem', paddingTop: '1.5rem' }}>
-              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.68rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '0.75rem' }}>
-                Admission
+              <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
+                Dr. Marius Isikalu is a researcher, policy strategist, and founder of The Axiom Collective, a premium postgraduate admissions and academic positioning consultancy dedicated to helping globally ambitious applicants gain admission into the world's leading universities, fellowship programmes, and leadership development opportunities.
               </p>
-              <p style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.05rem', color: 'var(--off-white)', fontWeight: 400, marginBottom: '0.25rem' }}>
-                Harvard University
+              <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
+                His work is founded on a simple principle: exceptional applications emerge from exceptional applicants. Rather than focusing solely on admissions documents, he works closely with candidates to develop intellectual identity, narrative coherence, strategic positioning, and long-term academic distinction. Through this approach, he helps applicants present not only achievement, but also the clarity and purpose sought by the world's most selective institutions.
               </p>
-              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.78rem', fontWeight: 300, color: 'var(--muted)', marginBottom: '0.6rem', lineHeight: 1.5 }}>
-                Master of Education (Ed.M.) · Learning Design, Innovation, and Technology · Graduate School of Education
+              <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
+                Dr. Isikalu serves as Head of Strategy and Methodology to the Senior Special Assistant to the President of Nigeria on Technical, Vocational and Entrepreneurship Education, where he contributes to the design of strategic initiatives aimed at advancing educational development, talent cultivation, and human capital formation. His experience at the intersection of policy, education, and leadership informs his distinctive approach to applicant development and academic mentorship.
               </p>
-              <button
-                onClick={() => setLightbox({ src: MARIUS_LETTER, alt: 'Harvard University admission letter' })}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  cursor: 'pointer',
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '0.72rem',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.1em',
-                  color: 'var(--crimson)',
-                  padding: 0,
-                }}
-              >
-                View Letter →
-              </button>
-            </div>
-          </AnimateOnScroll>
+              <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
+                Through The Axiom Collective, he has successfully guided candidates to institutions including Harvard University, Stanford University, Yale University, Columbia University, Johns Hopkins University, the London School of Economics, Brown University, and University College London, among others. His work focuses on helping applicants navigate highly competitive admissions environments through deliberate profile development, compelling personal narratives, and strategic institutional alignment.
+              </p>
+              <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '3rem' }}>
+                Dr. Isikalu holds a PhD in Political Science and maintains active interests in global affairs, political theory, research methodology, educational development, and leadership formation. He is particularly committed to cultivating a new generation of globally competitive African scholars, professionals, and policy leaders capable of contributing meaningfully to international academic, policy, and leadership spaces.
+              </p>
+
+              {/* Pull quote */}
+              <div style={{ borderLeft: '2px solid var(--crimson)', paddingLeft: '2rem', marginTop: '1rem' }}>
+                <blockquote className="font-display" style={{
+                  fontSize: 'clamp(1.2rem, 2vw, 1.55rem)',
+                  fontWeight: 300,
+                  fontStyle: 'italic',
+                  lineHeight: 1.45,
+                  color: 'var(--off-white)',
+                  letterSpacing: '0.01em',
+                }}>
+                  "Exceptional applicants are not manufactured through templates; they are cultivated through strategy and intellectual authenticity."
+                </blockquote>
+              </div>
+
+              {/* Admission */}
+              <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginTop: '1.5rem', marginBottom: '0' }}>
+                Dr. Isikalu also received an offer of admission from Harvard University's Graduate School of Education — the same institution whose admissions standards inform the strategic work he brings to every scholar at The Axiom Collective.
+              </p>
+              <div style={{ borderTop: '1px solid var(--border)', marginTop: '2rem', paddingTop: '1.5rem' }}>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.68rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '0.75rem' }}>
+                  Admission
+                </p>
+                <p style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.05rem', color: 'var(--off-white)', fontWeight: 400, marginBottom: '0.25rem' }}>
+                  Harvard University
+                </p>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.78rem', fontWeight: 300, color: 'var(--muted)', marginBottom: '0.6rem', lineHeight: 1.5 }}>
+                  Master of Education (Ed.M.) · Learning Design, Innovation, and Technology · Graduate School of Education
+                </p>
+                <button
+                  onClick={() => setLightbox({ src: MARIUS_LETTER, alt: 'Harvard University admission letter' })}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    fontFamily: 'DM Sans, sans-serif',
+                    fontSize: '0.72rem',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.1em',
+                    color: 'var(--crimson)',
+                    padding: 0,
+                  }}
+                >
+                  View Letter →
+                </button>
+              </div>
+            </AnimateOnScroll>
+
+          </div>
+
+          {/* Row 2 — Joffrey Doma */}
+          <div className="grid-asymm" style={{ gap: '6rem', alignItems: 'start' }}>
+
+            {/* Photo */}
+            <AnimateOnScroll>
+              <div style={{ position: 'relative', width: '100%', height: '480px' }}>
+                <Image
+                  src="/people/joff.png"
+                  alt="Joffrey Doma"
+                  fill
+                  style={{ objectFit: 'cover', objectPosition: 'top' }}
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                />
+              </div>
+              <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginTop: '1.75rem' }} />
+            </AnimateOnScroll>
+
+            {/* Bio */}
+            <AnimateOnScroll delay={200}>
+              <p style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: '0.7rem',
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                color: 'var(--crimson)',
+                fontWeight: 500,
+                marginBottom: '0.75rem',
+              }}>
+                Co-Founder
+              </p>
+              <h2 className="font-display" style={{
+                fontSize: 'clamp(2.2rem, 3vw, 3.2rem)',
+                fontWeight: 300,
+                color: 'var(--off-white)',
+                marginBottom: '0.5rem',
+                lineHeight: 1.1,
+              }}>
+                Joffrey Doma
+              </h2>
+              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', fontWeight: 300, color: 'var(--muted)', marginBottom: '1rem', lineHeight: 1.6 }}>
+                MSc, University of Oxford · PhD Candidate, University College London
+              </p>
+              <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginBottom: '2rem' }} />
+
+              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.9rem', fontWeight: 300, lineHeight: '1.85', color: 'var(--muted)', marginBottom: '1.25rem' }}>
+                Joffrey Doma is a researcher, educator, and higher education strategist whose academic and professional journey spans some of the United Kingdom's leading institutions. He holds an MA in International Relations from the University of Sheffield and an MSc in Global Governance and Diplomacy from the University of Oxford. He is currently pursuing a PhD at University College London (UCL), where his research engages critical questions of global governance, knowledge production, and environmental politics.
+              </p>
+              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.9rem', fontWeight: 300, lineHeight: '1.85', color: 'var(--muted)', marginBottom: '1.25rem' }}>
+                Having successfully navigated the complexities of international education, UK immigration systems, competitive scholarship applications, and academic career development, Joffrey brings a wealth of practical experience to students seeking to pursue educational opportunities abroad. Over the years, he has secured scholarships, research opportunities, and teaching appointments, developing a deep understanding of the academic pathways available to ambitious students at every stage of their journey.
+              </p>
+              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.9rem', fontWeight: 300, lineHeight: '1.85', color: 'var(--muted)', marginBottom: '1.25rem' }}>
+                His research interests lie at the intersection of African knowledge systems, global governance, and environmental politics. In particular, he is interested in how African intellectual traditions and epistemologies can contribute to contemporary debates on governance, sustainability, and international cooperation. His work also explores environmental governance in Africa, with a focus on the political, social, and institutional challenges shaping responses to climate and ecological change across the continent.
+              </p>
+              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.9rem', fontWeight: 300, lineHeight: '1.85', color: 'var(--muted)' }}>
+                At The Axiom Collective, Joffrey combines academic insight with practical mentorship, helping students identify opportunities, clarify their aspirations, and navigate the often-complex process of pursuing higher education at leading institutions around the world. His approach is grounded in the belief that successful applications emerge not from formulaic strategies, but from a clear understanding of purpose, potential, and long-term educational goals.
+              </p>
+            </AnimateOnScroll>
+
+          </div>
 
         </div>
       </section>
