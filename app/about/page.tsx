@@ -226,7 +226,7 @@ export default function AboutPage() {
           </AnimateOnScroll>
 
           {/* Row 1 — Dr. Marius Isikalu */}
-          <div className="grid-asymm" style={{ gap: '6rem', alignItems: 'start', paddingBottom: '5rem', marginBottom: '5rem', borderBottom: '1px solid var(--border)' }}>
+          <div className="grid-asymm leader-grid" style={{ gap: '6rem', alignItems: 'start', paddingBottom: '5rem', marginBottom: '5rem', borderBottom: '1px solid var(--border)' }}>
 
             {/* Photo */}
             <AnimateOnScroll>
@@ -331,7 +331,7 @@ export default function AboutPage() {
           </div>
 
           {/* Row 2 — Joffrey Doma */}
-          <div className="grid-asymm" style={{ gap: '6rem', alignItems: 'start' }}>
+          <div className="grid-asymm leader-grid" style={{ gap: '6rem', alignItems: 'start' }}>
 
             {/* Photo */}
             <AnimateOnScroll>

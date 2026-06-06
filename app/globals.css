@@ -303,4 +303,9 @@ body::before {
   .hero-inner {
     padding-bottom: 4rem !important;
   }
+
+  /* Reduce gap between photo and bio in Leadership rows on mobile */
+  .leader-grid {
+    gap: 2rem !important;
+  }
 }
