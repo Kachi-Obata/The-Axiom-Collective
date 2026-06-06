@@ -244,6 +244,17 @@ export default function AboutPage() {
 
             {/* Bio */}
             <AnimateOnScroll delay={200}>
+              <p style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: '0.68rem',
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: 'var(--crimson)',
+                fontWeight: 500,
+                marginBottom: '0.75rem',
+              }}>
+                Founder & Director
+              </p>
               <h2 className="font-display" style={{
                 fontSize: 'clamp(2.2rem, 3vw, 3.2rem)',
                 fontWeight: 300,
@@ -253,17 +264,7 @@ export default function AboutPage() {
               }}>
                 Dr. Marius Isikalu
               </h2>
-              <p style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontSize: '0.68rem',
-                letterSpacing: '0.2em',
-                textTransform: 'uppercase',
-                color: 'var(--crimson)',
-                fontWeight: 500,
-                marginBottom: '3rem',
-              }}>
-                Founder & Director
-              </p>
+              <span style={{ display: 'block', width: '40px', height: '1px', background: 'var(--crimson)', marginBottom: '2rem' }} />
 
               <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: '1.85', fontWeight: 300, marginBottom: '1.5rem' }}>
                 Dr. Marius Isikalu is a researcher, policy strategist, and founder of The Axiom Collective, a premium postgraduate admissions and academic positioning consultancy dedicated to helping globally ambitious applicants gain admission into the world's leading universities, fellowship programmes, and leadership development opportunities.
