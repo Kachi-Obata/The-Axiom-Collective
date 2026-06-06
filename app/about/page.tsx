@@ -335,7 +335,7 @@ export default function AboutPage() {
 
             {/* Photo */}
             <AnimateOnScroll>
-              <div style={{ position: 'relative', width: '100%', height: '480px' }}>
+              <div style={{ position: 'relative', width: '100%', aspectRatio: '3 / 4' }}>
                 <Image
                   src="/people/joff.png"
                   alt="Joffrey Doma"
