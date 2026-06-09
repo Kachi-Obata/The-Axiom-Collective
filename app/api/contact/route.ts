@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
   const institutions = String(body.institutions ?? '').trim().slice(0, 500);
   const message      = String(body.message      ?? '').trim().slice(0, 5000);
 
-  if (!firstName || !lastName || !email || !program || !stage || !message) {
+  if (!firstName || !lastName || !email || !program || !stage || !institutions || !message) {
     return NextResponse.json({ error: 'Missing required fields.' }, { status: 400 });
   }
 

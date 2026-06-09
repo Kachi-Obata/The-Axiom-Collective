@@ -52,6 +52,7 @@ export default function ContactPage() {
     formData.email.trim() && emailValid &&
     formData.program &&
     formData.stage &&
+    formData.institutions.trim() &&
     formData.message.trim()
   );
 
@@ -66,6 +67,7 @@ export default function ContactPage() {
         return '';
       case 'program': return formData.program ? '' : 'Please select a program type.';
       case 'stage':   return formData.stage   ? '' : 'Please select your application stage.';
+      case 'institutions': return formData.institutions.trim() ? '' : 'Please list at least one target institution.';
       case 'message': return formData.message.trim() ? '' : 'Please tell us about your goals.';
       default: return '';
     }
@@ -147,7 +149,8 @@ export default function ContactPage() {
         case 'email':     return !value.trim() || !EMAIL_RE.test(value.trim());
         case 'program':   return !value;
         case 'stage':     return !value;
-        case 'message':   return !value.trim();
+        case 'institutions': return !value.trim();
+        case 'message':      return !value.trim();
         default: return false;
       }
     })();
@@ -385,7 +388,7 @@ export default function ContactPage() {
 
               {/* Institutions */}
               <div>
-                <label htmlFor="institutions" style={labelStyle}>Target Institutions</label>
+                <label htmlFor="institutions" style={labelStyle}>Target Institutions *</label>
                 <input
                   id="institutions"
                   type="text"
@@ -393,9 +396,13 @@ export default function ContactPage() {
                   onChange={e => setFormData({ ...formData, institutions: e.target.value })}
                   style={inputStyle}
                   onFocus={e => (e.target as HTMLElement).style.borderColor = 'var(--crimson)'}
-                  onBlur={e => (e.target as HTMLElement).style.borderColor = 'var(--border)'}
+                  onBlur={e => {
+                    mark('institutions');
+                    (e.target as HTMLElement).style.borderColor = blurBorder('institutions', formData.institutions);
+                  }}
                   placeholder="e.g. Oxford, LSE, Harvard Kennedy School"
                 />
+                {fieldError('institutions') && <span style={errorTextStyle}>{fieldError('institutions')}</span>}
               </div>
 
               {/* Message */}
