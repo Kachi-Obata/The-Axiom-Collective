@@ -19,6 +19,13 @@ const stages = [
   'Already applied — need support',
 ];
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MESSAGE_MAX = 5000;
+
+/** Strip spaces, dashes, dots, parentheses from phone — keep digits and leading + */
+function normalizePhone(raw: string): string {
+  return raw.replace(/[\s\-().]/g, '');
+}
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -31,12 +38,45 @@ export default function ContactPage() {
     institutions: '',
     message: '',
   });
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
+  // ─── Validation ───────────────────────────────────────────────────
+  const emailValid = EMAIL_RE.test(formData.email.trim());
+
+  const isFormValid = Boolean(
+    formData.firstName.trim() &&
+    formData.lastName.trim() &&
+    formData.email.trim() && emailValid &&
+    formData.program &&
+    formData.stage &&
+    formData.message.trim()
+  );
+
+  function fieldError(field: string): string {
+    if (!touched[field]) return '';
+    switch (field) {
+      case 'firstName': return formData.firstName.trim() ? '' : 'First name is required.';
+      case 'lastName':  return formData.lastName.trim()  ? '' : 'Last name is required.';
+      case 'email':
+        if (!formData.email.trim()) return 'Email address is required.';
+        if (!emailValid)            return 'Please enter a valid email address.';
+        return '';
+      case 'program': return formData.program ? '' : 'Please select a program type.';
+      case 'stage':   return formData.stage   ? '' : 'Please select your application stage.';
+      case 'message': return formData.message.trim() ? '' : 'Please tell us about your goals.';
+      default: return '';
+    }
+  }
+
+  const mark = (field: string) => setTouched(t => ({ ...t, [field]: true }));
+
+  // ─── Submit ───────────────────────────────────────────────────────
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!isFormValid) return;
     setLoading(true);
     setError('');
 
@@ -44,7 +84,7 @@ export default function ContactPage() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, phone: normalizePhone(formData.phone) }),
       });
 
       const data = await res.json();
@@ -62,6 +102,7 @@ export default function ContactPage() {
     }
   };
 
+  // ─── Styles ───────────────────────────────────────────────────────
   const inputStyle: React.CSSProperties = {
     width: '100%',
     background: 'var(--bg-card)',
@@ -86,6 +127,57 @@ export default function ContactPage() {
     marginBottom: '0.5rem',
     fontWeight: 500,
   };
+
+  const errorTextStyle: React.CSSProperties = {
+    display: 'block',
+    fontFamily: 'DM Sans, sans-serif',
+    fontSize: '0.72rem',
+    color: 'var(--crimson)',
+    fontWeight: 300,
+    marginTop: '0.4rem',
+    lineHeight: 1.4,
+  };
+
+  /** Returns the border color to set on blur for a given field + current value */
+  function blurBorder(field: string, value: string): string {
+    const hasError = (() => {
+      switch (field) {
+        case 'firstName': return !value.trim();
+        case 'lastName':  return !value.trim();
+        case 'email':     return !value.trim() || !EMAIL_RE.test(value.trim());
+        case 'program':   return !value;
+        case 'stage':     return !value;
+        case 'message':   return !value.trim();
+        default: return false;
+      }
+    })();
+    return hasError ? 'var(--crimson)' : 'var(--border)';
+  }
+
+  // ─── Button state ─────────────────────────────────────────────────
+  const buttonDisabled = !isFormValid || loading;
+  const buttonStyle: React.CSSProperties = {
+    fontFamily: 'DM Sans, sans-serif',
+    fontSize: '0.78rem',
+    fontWeight: 500,
+    letterSpacing: '0.14em',
+    textTransform: 'uppercase',
+    padding: '18px 36px',
+    width: '100%',
+    marginTop: '0.5rem',
+    transition: 'all 0.25s ease',
+    cursor: buttonDisabled ? (loading ? 'default' : 'not-allowed') : 'pointer',
+    ...(loading
+      ? { background: 'transparent', color: 'var(--off-white)', border: '1px solid var(--crimson)', opacity: 0.6 }
+      : !isFormValid
+      ? { background: 'var(--bg-card)', color: 'var(--muted-light)', border: '1px solid var(--border)', opacity: 1 }
+      : { background: 'var(--crimson)', color: '#FFFFFF', border: '1px solid var(--crimson)', opacity: 1 }
+    ),
+  };
+
+  // ─── Character count ──────────────────────────────────────────────
+  const msgLen = formData.message.length;
+  const msgRemaining = MESSAGE_MAX - msgLen;
 
   if (submitted) {
     return (
@@ -166,13 +258,13 @@ export default function ContactPage() {
                   </div>
                 ))}
               </div>
-
             </div>
           </AnimateOnScroll>
 
           {/* Right: Form */}
           <AnimateOnScroll delay={200}>
-            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <form onSubmit={handleSubmit} noValidate style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+
               {/* Name row */}
               <div className="grid-2col" style={{ gap: '1rem' }}>
                 <div>
@@ -180,46 +272,63 @@ export default function ContactPage() {
                   <input
                     id="firstName"
                     type="text"
-                    required
                     value={formData.firstName}
                     onChange={e => setFormData({ ...formData, firstName: e.target.value })}
                     style={inputStyle}
                     onFocus={e => (e.target as HTMLElement).style.borderColor = 'var(--crimson)'}
-                    onBlur={e => (e.target as HTMLElement).style.borderColor = 'var(--border)'}
+                    onBlur={e => {
+                      mark('firstName');
+                      (e.target as HTMLElement).style.borderColor = blurBorder('firstName', formData.firstName);
+                    }}
                     placeholder="First name"
                   />
+                  {fieldError('firstName') && <span style={errorTextStyle}>{fieldError('firstName')}</span>}
                 </div>
                 <div>
                   <label htmlFor="lastName" style={labelStyle}>Last Name *</label>
                   <input
                     id="lastName"
                     type="text"
-                    required
                     value={formData.lastName}
                     onChange={e => setFormData({ ...formData, lastName: e.target.value })}
                     style={inputStyle}
                     onFocus={e => (e.target as HTMLElement).style.borderColor = 'var(--crimson)'}
-                    onBlur={e => (e.target as HTMLElement).style.borderColor = 'var(--border)'}
+                    onBlur={e => {
+                      mark('lastName');
+                      (e.target as HTMLElement).style.borderColor = blurBorder('lastName', formData.lastName);
+                    }}
                     placeholder="Last name"
                   />
+                  {fieldError('lastName') && <span style={errorTextStyle}>{fieldError('lastName')}</span>}
                 </div>
               </div>
 
+              {/* Email */}
               <div>
                 <label htmlFor="email" style={labelStyle}>Email Address *</label>
                 <input
                   id="email"
                   type="email"
-                  required
                   value={formData.email}
-                  onChange={e => setFormData({ ...formData, email: e.target.value })}
+                  onChange={e => {
+                    setFormData({ ...formData, email: e.target.value });
+                    // Re-evaluate border live once the field has been touched
+                    if (touched.email) {
+                      (e.target as HTMLElement).style.borderColor = blurBorder('email', e.target.value);
+                    }
+                  }}
                   style={inputStyle}
                   onFocus={e => (e.target as HTMLElement).style.borderColor = 'var(--crimson)'}
-                  onBlur={e => (e.target as HTMLElement).style.borderColor = 'var(--border)'}
+                  onBlur={e => {
+                    mark('email');
+                    (e.target as HTMLElement).style.borderColor = blurBorder('email', formData.email);
+                  }}
                   placeholder="your@email.com"
                 />
+                {fieldError('email') && <span style={errorTextStyle}>{fieldError('email')}</span>}
               </div>
 
+              {/* Phone */}
               <div>
                 <label htmlFor="phone" style={labelStyle}>Phone Number</label>
                 <input
@@ -234,38 +343,47 @@ export default function ContactPage() {
                 />
               </div>
 
+              {/* Program */}
               <div>
                 <label htmlFor="program" style={labelStyle}>Program Type *</label>
                 <select
                   id="program"
-                  required
                   value={formData.program}
                   onChange={e => setFormData({ ...formData, program: e.target.value })}
                   style={{ ...inputStyle, cursor: 'pointer' }}
                   onFocus={e => (e.target as HTMLElement).style.borderColor = 'var(--crimson)'}
-                  onBlur={e => (e.target as HTMLElement).style.borderColor = 'var(--border)'}
+                  onBlur={e => {
+                    mark('program');
+                    (e.target as HTMLElement).style.borderColor = blurBorder('program', formData.program);
+                  }}
                 >
                   <option value="" style={{ background: 'var(--bg)' }}>Select program type...</option>
                   {programs.map(p => <option key={p} value={p} style={{ background: 'var(--bg)' }}>{p}</option>)}
                 </select>
+                {fieldError('program') && <span style={errorTextStyle}>{fieldError('program')}</span>}
               </div>
 
+              {/* Stage */}
               <div>
                 <label htmlFor="stage" style={labelStyle}>Application Stage *</label>
                 <select
                   id="stage"
-                  required
                   value={formData.stage}
                   onChange={e => setFormData({ ...formData, stage: e.target.value })}
                   style={{ ...inputStyle, cursor: 'pointer' }}
                   onFocus={e => (e.target as HTMLElement).style.borderColor = 'var(--crimson)'}
-                  onBlur={e => (e.target as HTMLElement).style.borderColor = 'var(--border)'}
+                  onBlur={e => {
+                    mark('stage');
+                    (e.target as HTMLElement).style.borderColor = blurBorder('stage', formData.stage);
+                  }}
                 >
                   <option value="" style={{ background: 'var(--bg)' }}>Select your current stage...</option>
                   {stages.map(s => <option key={s} value={s} style={{ background: 'var(--bg)' }}>{s}</option>)}
                 </select>
+                {fieldError('stage') && <span style={errorTextStyle}>{fieldError('stage')}</span>}
               </div>
 
+              {/* Institutions */}
               <div>
                 <label htmlFor="institutions" style={labelStyle}>Target Institutions</label>
                 <input
@@ -280,19 +398,39 @@ export default function ContactPage() {
                 />
               </div>
 
+              {/* Message */}
               <div>
                 <label htmlFor="message" style={labelStyle}>Tell Us About Your Goals *</label>
                 <textarea
                   id="message"
-                  required
                   value={formData.message}
+                  maxLength={MESSAGE_MAX}
                   onChange={e => setFormData({ ...formData, message: e.target.value })}
                   rows={5}
                   style={{ ...inputStyle, resize: 'vertical', lineHeight: '1.7' }}
                   onFocus={e => (e.target as HTMLElement).style.borderColor = 'var(--crimson)'}
-                  onBlur={e => (e.target as HTMLElement).style.borderColor = 'var(--border)'}
+                  onBlur={e => {
+                    mark('message');
+                    (e.target as HTMLElement).style.borderColor = blurBorder('message', formData.message);
+                  }}
                   placeholder="Share your academic background, professional experience, and what you're hoping to achieve..."
                 />
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.4rem', minHeight: '1rem' }}>
+                  <span style={errorTextStyle}>{fieldError('message')}</span>
+                  {msgLen > 0 && (
+                    <span style={{
+                      fontFamily: 'DM Sans, sans-serif',
+                      fontSize: '0.72rem',
+                      fontWeight: 300,
+                      color: msgRemaining <= 200 ? 'var(--crimson)' : 'var(--muted-light)',
+                      lineHeight: 1.4,
+                      flexShrink: 0,
+                      marginLeft: '1rem',
+                    }}>
+                      {msgLen.toLocaleString()} / {MESSAGE_MAX.toLocaleString()}
+                    </span>
+                  )}
+                </div>
               </div>
 
               {error && (
@@ -303,25 +441,20 @@ export default function ContactPage() {
 
               <button
                 type="submit"
-                disabled={loading}
-                style={{
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '0.78rem',
-                  fontWeight: 500,
-                  letterSpacing: '0.14em',
-                  textTransform: 'uppercase',
-                  color: loading ? 'var(--off-white)' : '#FFFFFF',
-                  padding: '18px 36px',
-                  background: loading ? 'transparent' : 'var(--crimson)',
-                  border: '1px solid var(--crimson)',
-                  cursor: loading ? 'default' : 'pointer',
-                  transition: 'all 0.25s ease',
-                  width: '100%',
-                  marginTop: '0.5rem',
-                  opacity: loading ? 0.6 : 1,
+                disabled={buttonDisabled}
+                style={buttonStyle}
+                onMouseEnter={e => {
+                  if (!buttonDisabled) {
+                    (e.currentTarget as HTMLElement).style.background = 'transparent';
+                    (e.currentTarget as HTMLElement).style.color = 'var(--off-white)';
+                  }
                 }}
-                onMouseEnter={e => { if (!loading) { (e.currentTarget as HTMLElement).style.background = 'transparent'; (e.currentTarget as HTMLElement).style.color = 'var(--off-white)'; } }}
-                onMouseLeave={e => { if (!loading) { (e.currentTarget as HTMLElement).style.background = 'var(--crimson)'; (e.currentTarget as HTMLElement).style.color = '#FFFFFF'; } }}
+                onMouseLeave={e => {
+                  if (!buttonDisabled) {
+                    (e.currentTarget as HTMLElement).style.background = 'var(--crimson)';
+                    (e.currentTarget as HTMLElement).style.color = '#FFFFFF';
+                  }
+                }}
               >
                 {loading ? 'Sending...' : 'Submit Inquiry'}
               </button>
@@ -329,6 +462,7 @@ export default function ContactPage() {
               <p style={{ color: 'var(--muted)', fontSize: '0.75rem', fontWeight: 300, textAlign: 'center', lineHeight: '1.6' }}>
                 Your information is kept strictly confidential. We will respond within 2–3 business days.
               </p>
+
             </form>
           </AnimateOnScroll>
         </div>
