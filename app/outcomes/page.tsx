@@ -30,6 +30,7 @@ const AVAILABLE_LETTERS = new Set([
   '/results/letters/halima-jhu.jpg',
   '/results/letters/halima-lse.jpg',
   '/results/letters/emmanuel-ucl.jpg',
+  '/results/letters/meribole-imperial.jpg',
 ]);
 
 const EYEBROW: React.CSSProperties = {
@@ -158,12 +159,17 @@ const halimaAdmissions: Admission[] = [
   },
 ];
 
-const emmanuelAdmissions: Admission[] = [
+const meriboleAdmissions: Admission[] = [
   {
     university: 'University College London',
     programme: 'MSc Digital Health and Entrepreneurship · Global Business School for Health',
     tag: 'Unconditional Offer',
     letter: '/results/letters/emmanuel-ucl.jpg',
+  },
+  {
+    university: 'Imperial Business School, Imperial College London',
+    programme: 'MSc Global Health Management · Starting September 2026',
+    letter: '/results/letters/meribole-imperial.jpg',
   },
 ];
 
@@ -229,8 +235,8 @@ export default function ResultsPage() {
         <div className="results-stats" style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
           {[
             { number: '3', label: 'Scholars Positioned' },
-            { number: '10', label: 'Elite Admissions' },
-            { number: '8', label: 'Institutions' },
+            { number: '11', label: 'Elite Admissions' },
+            { number: '9', label: 'Institutions' },
             { number: '100%', label: 'Acceptance Rate' },
           ].map((stat, i, arr) => (
             <div key={stat.label} style={{
@@ -362,7 +368,7 @@ export default function ResultsPage() {
             <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.68rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1rem' }}>
               Admitted To
             </p>
-            {emmanuelAdmissions.map(a => (
+            {meriboleAdmissions.map(a => (
               <AdmissionRow key={a.university} admission={a} onLetterClick={openLetter} />
             ))}
           </AnimateOnScroll>
