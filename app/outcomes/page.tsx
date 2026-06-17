@@ -168,7 +168,7 @@ const meriboleAdmissions: Admission[] = [
   },
   {
     university: 'Imperial Business School, Imperial College London',
-    programme: 'MSc Global Health Management · Starting September 2026',
+    programme: 'MSc Global Health Management',
     letter: '/results/letters/meribole-imperial.jpg',
   },
 ];
@@ -387,7 +387,7 @@ export default function ResultsPage() {
               "Applying to a world-class university can feel overwhelming, particularly when there is so much conflicting advice about what makes a successful application. Marius helped cut through that noise. He took the time to understand my background and aspirations, then worked with me to develop a clear and coherent application strategy. What I appreciated most was that he never tried to impose a story on me. Instead, he helped me discover and articulate my own. His guidance gave me confidence at every stage of the process, from refining my academic goals to preparing my application materials. Receiving an offer from UCL was an incredible moment, and I am deeply thankful for the support and mentorship that helped make it possible."
             </blockquote>
             <p className="font-display" style={{ fontSize: '0.95rem', fontStyle: 'italic', color: 'var(--off-white)' }}>
-              — S. Meribole, UCL MSc
+              — S. Meribole
             </p>
           </AnimateOnScroll>
 
@@ -431,7 +431,7 @@ export default function ResultsPage() {
               "Before working with Marius, I knew where I wanted to go, but I was not entirely sure how to present my experiences and ambitions in a way that reflected who I was. His approach was thoughtful and highly personalised. He encouraged me to think beyond the application itself and focus on the broader trajectory I wanted to build for my academic and professional future. Through that process, I developed a much clearer sense of purpose and confidence. What I valued most was his genuine investment in my success and his willingness to challenge me to think more critically about my goals. Receiving offers from both LSE and LSHTM was a proud milestone, and I credit much of my growth during that period to the mentorship and strategic guidance I received."
             </blockquote>
             <p className="font-display" style={{ fontSize: '0.95rem', fontStyle: 'italic', color: 'var(--off-white)' }}>
-              — H. Shobule, LSE
+              — H. Shobule
             </p>
           </AnimateOnScroll>
 
