@@ -1,6 +1,33 @@
 'use client';
 import { useState } from 'react';
+import Script from 'next/script';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
+
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (cb: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
+
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
+function getRecaptchaToken(): Promise<string> {
+  return new Promise((resolve, reject) => {
+    if (!RECAPTCHA_SITE_KEY || typeof window === 'undefined' || !window.grecaptcha) {
+      reject(new Error('Verification failed to load. Please refresh and try again.'));
+      return;
+    }
+    window.grecaptcha.ready(() => {
+      window.grecaptcha
+        .execute(RECAPTCHA_SITE_KEY, { action: 'contact' })
+        .then(resolve)
+        .catch(() => reject(new Error('Verification failed. Please refresh and try again.')));
+    });
+  });
+}
 
 const programs = [
   'Master\'s Degree (MSc / MA / LLM)',
@@ -83,10 +110,12 @@ export default function ContactPage() {
     setError('');
 
     try {
+      const recaptchaToken = await getRecaptchaToken();
+
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, phone: normalizePhone(formData.phone) }),
+        body: JSON.stringify({ ...formData, phone: normalizePhone(formData.phone), recaptchaToken }),
       });
 
       const data = await res.json();
@@ -98,8 +127,8 @@ export default function ContactPage() {
       }
 
       setSubmitted(true);
-    } catch {
-      setError('Unable to send your inquiry. Please check your connection and try again.');
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Unable to send your inquiry. Please check your connection and try again.');
       setLoading(false);
     }
   };
@@ -201,6 +230,10 @@ export default function ContactPage() {
 
   return (
     <>
+      {RECAPTCHA_SITE_KEY && (
+        <Script src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`} strategy="afterInteractive" />
+      )}
+
       {/* HERO */}
       <section style={{
         display: 'flex',

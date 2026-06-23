@@ -15,17 +15,22 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Contact form is not configured yet. Please email us directly.' }, { status: 503 });
   }
 
+  if (!process.env.RECAPTCHA_SECRET_KEY) {
+    return NextResponse.json({ error: 'Contact form is not configured yet. Please email us directly.' }, { status: 503 });
+  }
+
   const resend = new Resend(process.env.RESEND_API_KEY);
   const body = await req.json();
 
-  const firstName    = String(body.firstName    ?? '').trim().slice(0, 200);
-  const lastName     = String(body.lastName     ?? '').trim().slice(0, 200);
-  const email        = String(body.email        ?? '').trim().slice(0, 500);
-  const phone        = String(body.phone        ?? '').trim().slice(0, 100);
-  const program      = String(body.program      ?? '').trim().slice(0, 200);
-  const stage        = String(body.stage        ?? '').trim().slice(0, 200);
-  const institutions = String(body.institutions ?? '').trim().slice(0, 500);
-  const message      = String(body.message      ?? '').trim().slice(0, 5000);
+  const firstName      = String(body.firstName      ?? '').trim().slice(0, 200);
+  const lastName       = String(body.lastName       ?? '').trim().slice(0, 200);
+  const email          = String(body.email          ?? '').trim().slice(0, 500);
+  const phone          = String(body.phone          ?? '').trim().slice(0, 100);
+  const program        = String(body.program        ?? '').trim().slice(0, 200);
+  const stage          = String(body.stage          ?? '').trim().slice(0, 200);
+  const institutions   = String(body.institutions   ?? '').trim().slice(0, 500);
+  const message        = String(body.message        ?? '').trim().slice(0, 5000);
+  const recaptchaToken = String(body.recaptchaToken ?? '');
 
   if (!firstName || !lastName || !email || !program || !stage || !institutions || !message) {
     return NextResponse.json({ error: 'Missing required fields.' }, { status: 400 });
@@ -34,6 +39,24 @@ export async function POST(req: NextRequest) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return NextResponse.json({ error: 'Invalid email address.' }, { status: 400 });
+  }
+
+  if (!recaptchaToken) {
+    return NextResponse.json({ error: 'Verification failed. Please refresh and try again.' }, { status: 400 });
+  }
+
+  const verifyRes = await fetch('https://www.googleapis.com/recaptcha/api/siteverify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
+      secret: process.env.RECAPTCHA_SECRET_KEY,
+      response: recaptchaToken,
+    }),
+  });
+  const verifyData = await verifyRes.json();
+
+  if (!verifyData.success || (verifyData.score ?? 0) < 0.5) {
+    return NextResponse.json({ error: 'Verification failed. Please try again.' }, { status: 400 });
   }
 
   const to   = process.env.CONTACT_EMAIL   || 'marius@theaxiomcollective.org';
