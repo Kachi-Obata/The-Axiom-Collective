@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Verification failed. Please refresh and try again.' }, { status: 400 });
   }
 
-  const verifyRes = await fetch('https://www.googleapis.com/recaptcha/api/siteverify', {
+  const verifyRes = await fetch('https://www.google.com/recaptcha/api/siteverify', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: new URLSearchParams({
@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
   });
   const verifyData = await verifyRes.json();
 
-  if (!verifyData.success || (verifyData.score ?? 0) < 0.5) {
+  if (!verifyData.success || verifyData.action !== 'contact' || (verifyData.score ?? 0) < 0.5) {
     return NextResponse.json({ error: 'Verification failed. Please try again.' }, { status: 400 });
   }
 
