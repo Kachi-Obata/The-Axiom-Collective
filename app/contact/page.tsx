@@ -503,6 +503,18 @@ export default function ContactPage() {
                 Your information is kept strictly confidential. We will respond within 2–3 business days.
               </p>
 
+              <p style={{ color: 'var(--muted-light)', fontSize: '0.68rem', fontWeight: 300, textAlign: 'center', lineHeight: '1.6' }}>
+                This site is protected by reCAPTCHA and the Google{' '}
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--muted-light)', textDecoration: 'underline' }}>
+                  Privacy Policy
+                </a>{' '}
+                and{' '}
+                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--muted-light)', textDecoration: 'underline' }}>
+                  Terms of Service
+                </a>{' '}
+                apply.
+              </p>
+
             </form>
           </AnimateOnScroll>
         </div>

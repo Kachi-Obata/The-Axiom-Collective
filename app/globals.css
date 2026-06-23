@@ -82,6 +82,12 @@ body::before {
   color: #FFFFFF;
 }
 
+/* Hide the reCAPTCHA v3 floating badge — required attribution text is shown
+   on the contact form instead, per Google's terms. */
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 /* Animations */
 @keyframes fadeUp {
   from {
